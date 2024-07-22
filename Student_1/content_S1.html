@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>Tourism</title>
+
+    <style>
+        body {
+            background: url(images/gradient_BG.jpg);
+            background-size: cover;
+        }
+
+        .main-title {
+            text-align: center;
+            color: #89C2D9;
+        }
+
+        .content-title {
+            margin-top: 50px;
+            text-align: center;
+            color: #89C2D9;
+        }
+
+        .content-title h2 {
+            margin-bottom: 15px;
+        }
+
+        .intro {
+            width: 800px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0px;
+            background-color: #A9D6E5;
+            padding: 10px 15px;
+            border-radius: 10px;
+            color: #012A4A;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+        }
+
+        .content-continer-sub-one,  .content-continer-sub-two, .content-continer-sub-three, .content-continer-sub-four{
+            display: grid;
+            grid-gap: 20px;
+            width: 800px;
+            height: 500px;
+            transition: 0.25s;
+            border-radius: 10px;
+        }
+
+         .box {
+            background: var(--img);
+            background-position: center;
+            background-size: cover;
+            transition: 0.25s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            filter: grayscale(0) brightness(1);
+            border-radius: 10px;
+        }
+
+        .content-continer-sub-one:hover .box, .content-continer-sub-two:hover .box, .content-continer-sub-three:hover .box, .content-continer-sub-four:hover .box {
+            filter: grayscale(1);
+        }
+
+        .content-continer-sub-one .box:hover, .content-continer-sub-two .box:hover, .content-continer-sub-three .box:hover, .content-continer-sub-four .box:hover {
+            filter: grayscale(0) brightness(1.25);
+        }
+
+        .content-continer-sub-one {
+            grid-template-columns: 3.4fr 0.2fr 0.2fr 0.2fr;
+        }
+        .content-continer-sub-two {
+            grid-template-columns: 0.2fr 3.4fr 0.2fr 0.2fr;
+        }
+        .content-continer-sub-three {
+            grid-template-columns: 0.2fr 0.2fr 3.4fr 0.2fr;
+        }
+        .content-continer-sub-four {
+            grid-template-columns: 0.2fr 0.2fr 0.2fr 3.4fr;
+        }
+
+        .box:hover::after {
+            opacity: 1;
+            transition-delay: 0.25s;
+        }
+
+        .box a{
+            color: #012A4A;
+            font-size: medium;
+            text-align: center;
+            text-decoration: none;
+            background-color: #A9D6E5;
+            border-radius: 5px;
+            padding: 0 2px;
+            transition: 0.5s;
+        }
+
+        .box a:hover {
+            transform: scale(0.9);
+            opacity: 0.8;
+        }
+        
+
+        .box:not(:hover) span {
+            display: none;
+        }
+
+        .links {
+            text-decoration: none;
+            color: #014F86;
+            font-style: italic;
+        }
+
+        .links:hover {
+            text-decoration: underline;
+        }
+
+        #top-button {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <script>
+        document.addEventListener('scroll',()=>{
+            const header = document.querySelector("header");
+
+            if(window.scrollY >0){
+                header.classList.add("scrolled");
+
+            }else {
+                header.classList.remove("scrolled")
+            }
+        })
+    </script>
+    <header>
+        <div class="company-logo">
+            <img class="logo" src="images/logo.jpg" alt="logo">
+            <img src="images/titleFinal.png" alt="title" class="company-title">
+        </div>
+        
+        <nav>
+            <ul class="nav_links">
+                <li><a href="../Student_2/home.html">Home</a></li>
+                <li><a href="../Student_3/team.html">About Us</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="../Student_4/sitemap.html">Sitemap</a></li>
+                <li><a href="../Student_4/gallery.html">Gallery</a></li>
+                <li><a href="../Student_2/feedback.html">Feedback</a></li>
+            </ul>
+
+        </nav>
+
+        <a href="cart.html">
+            <div class="cart">
+                <i class="bi bi-cart"></i> <!--Shopping cart logo from bootsrtap-logos-->
+                <div id="cartAmount" class="cartAmount">0</div> <!--Initially the item count on the cart will be 0-->
+            </div>
+        </a>
+
+        <div class="buttons">
+            <a  href="../Student_3/profile.html" class="button">Signup</a>
+        </div>
+
+    </header>
+
+    <div class="main-title">
+        <h1 id="top">Underwater and Deep-Sea Tourism</h1>
+
+        <p class="intro">
+            Explore the mesmerizing world beneath the waves through underwater and deep-sea tourism. 
+            This thrilling adventure offers a unique glimpse into the ocean's mysteries, vibrant ecosystems, and historical shipwrecks. <br>
+
+            -Scroll to - <br>
+            <a href="#one" class="links">Technological Advancements</a> <br>
+            <a href="#two" class="links">Environmental Awareness</a> <br>
+            <a href="#three" class="links">Experience Highlights</a> <br>
+            <a href="#four" class="links">Key Takeaway Points</a> 
+
+
+        </p>
+        
+    </div>
+    
+    <div class="content-title">
+        <h2 id="one">Technological Advancements</h2>
+        <p class="intro">
+            Thanks to some recent improvements in diving equipment and submersible vehicles, divers have extended their reach beneath the water surface. 
+            While scuba diving has long been confined to those with proper certifications, 
+            it is easier for a larger number of people not as experienced in the water thanks to new user-friendly dive equipment - like full-face snorkel masks. 
+            Matt Dooley/Richard Branson's Submarine rides provide a singular option for viewing the ocean floor.
+        </p>
+    </div>
+    <div class="main-container">
+        <div class="content-continer-sub-one">
+            <div class="box" style="--img:url(images/tourism5.jpg)" >
+                <a href="#one"><span>Technological Advancements</span></a>
+            </div>
+            <div class="box" style="--img:url(images/homepage_content_tourism.jpg)">
+                <a href="#two"><span>Environmental Awareness</span></a>
+            </div>
+            <div class="box" style="--img:url(images/tourism4.jpg)">
+                <a href="#three"><span>Experience Highlights</span></a>
+            </div>
+            <div class="box" style="--img:url(images/tourism01.jpg)">
+                <a href="#four"><span>Key Takeaway Points</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-title">
+        <h2 id="two">Environmental Awareness</h2>
+        <p class="intro">
+            Underwater tourism not only provides thrilling adventures but also promotes marine conservation by educating visitors about the delicate ecosystems beneath the waves. 
+            Tour operators are increasingly focusing on sustainable practices to minimize the impact on the environment. 
+            Collaborations with conservationists and marine biologists help create immersive and educational experiences that highlight the importance of protecting our oceans. 
+            Programs encouraging citizen science and volunteerism play a significant role in involving travelers in conservation efforts, 
+            fostering a deeper understanding and appreciation for marine life.
+        </p>
+    </div>
+    <div class="main-container">
+        <div class="content-continer-sub-two">
+            <div class="box" style="--img:url(images/tourism5.jpg)" >
+                <a href="#one"><span>Technological Advancements</span></a>
+            </div>
+            <div class="box" style="--img:url(images/homepage_content_tourism.jpg)">
+                <a href="#two"><span>Environmental Awareness</span></a>
+            </div>
+            <div class="box" style="--img:url(images/tourism4.jpg)">
+                <a href="#three"><span>Experience Highlights</span></a>
+            </div>
+            <div class="box" style="--img:url(images/tourism01.jpg)">
+                <a href="#four"><span>Key Takeaway Points</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-title">
+        <h2 id="three">Experience Highlights</h2>
+        <p class="intro">
+            Swim with dolphins and manta rays, witness the magical bioluminescence full of light-producing organisms or dive into wonderful coral gardens to see rare marine life. 
+            With these mesmerizing experiences, come as we embark on an unforgettable journey into the deep blue wonder to explore its tranquil beauty and enigmatic charm. 
+            Underwater tourism mixes the excitement of discovery with an ecological aspect, which makes it a resourceful pastime for adventurers and environmentalists alike.
+        </p>
+    </div>
+    <div class="main-container">
+        <div class="content-continer-sub-three">
+            <div class="box" style="--img:url(images/tourism5.jpg)" >
+                <a href="#one"><span>Technological Advancements</span></a>
+            </div>
+            <div class="box" style="--img:url(images/homepage_content_tourism.jpg)">
+                <a href="#two"><span>Environmental Awareness</span></a>
+            </div>
+            <div class="box" style="--img:url(images/tourism4.jpg)">
+                <a href="#three"><span>Experience Highlights</span></a>
+            </div>
+            <div class="box" style="--img:url(images/tourism01.jpg)">
+                <a href="#four"><span>Key Takeaway Points</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-title">
+        <h2 id="four">Key Takeaway Points</h2>
+        <p class="intro">
+            This style of tourism is what one may term an adventure with a conscience; 
+            you are diving to see something unforgettable and share the experience, 
+            as opposed simply hitting in beach bar not fully exploring your surroundings. 
+            Prospects are brighter than ever for more water warriors to be able to share the mysteries hiding beneath the sea as this rugged branch of natural technology continues and divers continue to do what they can! 
+            The quest to balance the pull of people with the imperative of saving marine environments is a crusade.
+        </p>
+    </div>
+    <div class="main-container">
+        <div class="content-continer-sub-four">
+            <div class="box" style="--img:url(images/tourism5.jpg)" >
+                <a href="#one"><span>Technological Advancements</span></a>
+            </div>
+            <div class="box" style="--img:url(images/homepage_content_tourism.jpg)">
+                <a href="#two"><span>Environmental Awareness</span></a>
+            </div>
+            <div class="box" style="--img:url(images/tourism4.jpg)">
+                <a href="#three"><span>Experience Highlights</span></a>
+            </div>
+            <div class="box" style="--img:url(images/tourism01.jpg)">
+                <a href="#four"><span>Key Takeaway Points</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="buttons" id="top-button">
+        <a href="#top" class="button">
+            <i class="bi bi-arrow-up-circle"></i>
+        </a>
+    </div>
+
+
+    <section class="section_footer">
+        <div class="footer_pageEditor">
+
+            <p>Done by <a href="pageEditor_S1.html" target="_blank">Robosriyas Fernando</a></p>
+            
+        </div>
+
+        <div class="footer">
+
+            <div class="footer_content">
+                
+                <div class="footer_logo">
+                    <img class="footer_img" src="images/logo.jpg" alt="company logo">
+                    <img class="footer_title" src="images/titleFinal.png" alt="website title">
+                </div>
+                <div class="footer_icons">
+                    <h4>Social media</h4>
+                    <a href="https://www.instagram.com/unitednations/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="https://web.facebook.com/groups/greenrangersearth.org/?_rdc=1&_rdr" target="_blank"><i class='bx bxl-facebook' ></i></a>
+                    <a href="https://x.com/UN" target="b"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://www.linkedin.com/company/united-nations/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                </div>
+                
+
+            </div>
+            <div class="footer_content">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="../Student_2/home.html">Home</a></li>
+                    <li><a href="../Student_3/team.html">About US</a></li>
+                    <li><a href="../Student_2/feedback.html">Feedback</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="../Student_4/sitemap.html">Sitemap</a></li>
+                    <li><a href="../Student_4/gallery.html">Gallery</a></li>
+                    <li><a href="../Student_2/lifediversity.html">Life Diversity</a></li>
+                    <li><a href="content_S1.html">Tourism</a></li>
+                    <li><a href="../Student_3/content_S3.html">Coral Reefs</a></li>
+                    <li><a href="../Student_4/content_page04.html">Sustainable Practices</a></li>
+
+                </ul>              
+
+            </div>
+
+            <div class="footer_content">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>Tele  : +1-212-963-3209</li>
+                    <li>Email :  population@un.org</li>
+                    <li class="extra_space">director.oisc@un.org</li>
+                </ul>
+
+            </div>
+
+            <div class="footer_content">
+
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="https://www.un.org/en/about-us/terms-of-use" target="_blank">Terms and conditions</a></li>
+                    <li><a href="https://www.un.org/en/about-us/privacy-notice" target="_blank">Privacy policy</a></li>
+                </ul>
+
+            </div>
+    </div>
+    
+    <div class="rights">
+        &copy; 2024 Beneath the waves. All rights reserved.
+    </div>
+
+    </section>
+
+    <script>
+        let basket = JSON.parse(localStorage.getItem("data")) || [];
+
+        /**
+         * This function is to update the basket
+         * The function will get triggered whenever the number on the card is getting updated
+         */
+        let calculation = () => {
+            let cartIcon = document.getElementById("cartAmount");
+            cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x+y, 0);
+            // mapping all the elements to get the number of times an element gets added to the cart
+            /**
+             * mapping will hold a new array with the item count values, so we're using reduce to add them
+             * x in reduce is the first number
+             * y in reduce will be the second number
+             * if map returns [1, 2, 3, 4]
+             * on the start x is 1, y is 2
+             * and then x is 3(1+3) and y is 3. goes till everything gets added
+             */
+        }
+
+        calculation(); // Invoking the function outside so that the cart will be updated at the beginning of the program
+    </script>
+
+</body>
+</html>

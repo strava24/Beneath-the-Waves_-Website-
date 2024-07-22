@@ -1,0 +1,124 @@
+body {
+    background-color: #005f69;
+    background-image: url(images/bb1.png);
+    color: aqua;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-weight: bold;
+        
+}
+
+div {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.introduction {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.introduction h1 {
+    margin-top: 10px;
+    font-size: 40px;
+}
+
+.introduction p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.introduction p span{
+    color: #02a4da;
+}
+
+.profile img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 4px solid #00BFFF;
+}
+
+img:hover {
+    border: 6px solid #1609c5;
+}
+
+.email {
+    text-align: center;
+}
+
+.email button {
+    background-color: #00BFFF;
+    border-radius: 10px;
+    color: #081b29;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.email button:hover {
+    background-color: #06b6d4;
+}
+
+.social_media {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social_media a {
+    color: #00BFFF;
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social_media a:hover {
+    color: #06b6d4;
+}
+
+.tasks {
+    text-align: center;
+    padding: 20px;
+    background-color: #d5d4d4;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.tasks h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.tasks p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #3c3c3c;
+}
+
+.tasks a {
+    display: block;
+    font-size: 1.1em;
+    color: #007bff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.tasks a:hover {
+    color: #0056b3;
+}
+
+.top{
+    justify-content: center;
+    display: flex;
+    padding-bottom: 5px;
+}

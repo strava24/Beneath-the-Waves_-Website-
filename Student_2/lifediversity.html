@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Diversity</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    
+    <style>
+        body {
+            margin: 0;
+            background-color: #00abf0;
+           
+        }
+        .topic {
+            background-color: #001d3d;
+            color: beige;
+            padding: 75px;
+          
+        }
+        .topic h1{
+            text-align: center;
+            padding: 20px;
+        }
+        .sub_topics {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            
+        }
+        .sub_topics li {
+            list-style: none;
+            display: inline;
+            margin: 0 15px;
+            text-align: center;
+            padding: 20px;
+
+            
+        }
+        .sub_topics li :hover{
+            color: aqua;
+            
+        }
+        .sub_topics a {
+            text-decoration: none;
+            color: #00abf0;
+        }
+        .rest {
+            background-color: #00abf0;
+            padding: 20px;
+            
+           
+        }
+        .rest div {
+            padding: 20px;
+            background-color: #fff;
+            margin: 20px 0;
+            
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .rest h3 {
+            margin-top: 0;
+            color: #001d3d;
+        }
+        .rest img{
+            width: 600px;
+            
+        }
+        .ecosystem {
+            background-image: url(images/lifediversity_ecosystem.jpg);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            padding: 20px;
+            
+        }
+
+        .biodiversity {
+            background-image: url(images/lifediversity_biodiversity.jpg);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            padding: 20px;
+        }
+
+        .climate {
+            background-image: url(images/lifediversity_climate.jpg);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            padding: 20px;
+        }
+
+        .pollution {
+            background-image: url(images/lifediversity_pollution.jpg);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            padding: 20px;
+        }
+
+        
+        .ecosystem::before,
+        .biodiversity::before,
+        .climate::before,
+        .pollution::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1; 
+        }
+
+        .ecosystem h3, p,
+        .biodiversity h3,p,
+        .climate h3,p,
+        .pollution h3,p {
+            position: relative;
+            z-index: 2; 
+            color: #ffffff; 
+            padding: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <script>
+    
+        document.addEventListener('scroll',()=>{
+            const header = document.querySelector("header");
+
+            if(window.scrollY >0){
+                header.classList.add("scrolled");
+
+            }else {
+                header.classList.remove("scrolled")
+            }
+        })
+    </script>
+
+    
+        <header>
+            <div class="company-logo">
+                <img class="logo" src="images/logo.jpg" alt="logo">
+                <img src="images/titleFinal.png" alt="title" class="company-title">
+            </div>
+            
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="../Student_3/team.html">About Us</a></li>
+                    <li><a href="../Student_1/shop.html">Shop</a></li>
+                    <li><a href="../Student_4/sitemap.html">Sitemap</a></li>
+                    <li><a href="../Student_4/gallery.html">Gallery</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+    
+            </nav>
+    
+            <a href="../Student_1/cart.html">
+                <div class="cart">
+                    <i class="bi bi-cart"></i> <!--Shopping cart logo from bootsrtap-logos-->
+                    <div id="cartAmount" class="cartAmount">0</div> <!--Initially the item count on the cart will be 0-->
+                </div>
+            </a>
+    
+            <div class="buttons">
+                <a  href="../Student_3/profile.html" class="button">Signup</a>
+            </div>              
+        
+    
+        </header>
+    <section class="topic">
+        <h1>Life Diversity</h1>
+        <ul class="sub_topics">
+            <li><a href="#ecosystem">Marine ecosystem health</a></li>
+            <li><a href="#biodiversity">Biodiversity and species protection</a></li>
+            <li><a href="#climate">Climate change and ocean impact</a></li>
+            <li><a href="#pollution">Marine Pollution and Its Mitigation</a></li>
+        </ul>
+    </section>
+    <section class="rest">
+
+        <div id="ecosystem" class="ecosystem">
+            <h3>Marine ecosystem health</h3>
+            <p>Our oceans are like the lungs of our planet, providing us with oxygen and regulating our climate. Healthy marine ecosystems are vital for the well-being of all life on Earth. By protecting and nurturing these underwater worlds, we ensure that marine life thrives, fisheries remain abundant, and natural beauty continues to inspire us. Imagine the tranquility of a coral reef, teeming with colorful fish and vibrant coral formations. This delicate balance supports not only marine life but also human communities that rely on these resources for their livelihoods.
+
+                Every time we take a breath, we are connected to the ocean. Phytoplankton, tiny plant-like organisms in the sea, produce more than half of the world's oxygen. When we think about the health of our marine ecosystems, it's not just about preserving beauty; it's about safeguarding a critical component of our life support system. By reducing pollution, practicing sustainable fishing, and protecting marine habitats, we can ensure that our oceans continue to sustain life on Earth for generations to come.</p>
+            
+        </div>
+
+        <div id="biodiversity" class="biodiversity">
+            <h3>Biodiversity and species protection</h3>
+            <p>The ocean is home to an incredible array of species, from the tiniest plankton to majestic whales. Each species plays a crucial role in the balance of marine ecosystems. Protecting biodiversity means safeguarding these creatures and their habitats, ensuring that future generations can marvel at the wonders of marine life. Imagine the awe of seeing a sea turtle glide through crystal-clear waters or the excitement of spotting a pod of dolphins playing in the waves. These experiences remind us of the ocean's incredible richness and the importance of its preservation.
+
+                Our connection to marine life is deeply personal. Many of us have memories of beachcombing for shells, snorkeling among vibrant coral reefs, or simply enjoying a seafood meal. These moments are gifts from the ocean's biodiversity. However, overfishing, habitat destruction, and climate change threaten this delicate balance. By supporting marine protected areas, sustainable fishing practices, and conservation efforts, we can protect the diverse life forms that make our oceans so extraordinary.</p>
+            
+            </div>
+        <div id="climate" class="climate">
+            <h3>Climate change and ocean impact</h3>
+            <p>Our oceans are on the frontline of climate change, absorbing vast amounts of carbon dioxide and heat. This leads to rising sea levels, warmer waters, and changing marine ecosystems. By understanding and addressing the impacts of climate change on our oceans, we can take steps to protect our planet and preserve the delicate balance of life below water. Consider the plight of coral reefs, often referred to as the "rainforests of the sea." These vibrant ecosystems are bleaching and dying due to increasing ocean temperatures, a stark reminder of the urgent need for action.
+
+                Climate change affects us all, from coastal communities facing erosion and flooding to the loss of livelihoods dependent on marine resources. It's easy to feel overwhelmed, but each of us can contribute to the solution. Simple actions like reducing our carbon footprint, supporting clean energy initiatives, and advocating for policies that address climate change can make a significant difference. Together, we can work to mitigate the impacts of climate change and protect the ocean environments that sustain us.</p>
+            
+        </div>
+
+        <div id="pollution" class="pollution">
+            <h3>Marine pollution and its mitigation</h3>
+            <p>Pollution is a significant threat to marine life, from plastic waste to toxic chemicals. It harms creatures, disrupts ecosystems, and even affects human health. By reducing pollution and promoting cleaner oceans, we can create a healthier environment for marine life and ourselves, ensuring that our oceans remain vibrant and full of life. Imagine the distress of a sea turtle entangled in plastic or a seabird ingesting toxic waste. These images are heart-wrenching but highlight the urgent need to address marine pollution.
+
+                Every piece of plastic ever made still exists, much of it ending up in our oceans. This pollution breaks down into microplastics, which are ingested by marine life and enter the food chain, eventually impacting human health. By choosing reusable products, participating in beach cleanups, and supporting legislation aimed at reducing plastic production, we can take tangible steps to combat this crisis. Our actions, no matter how small, collectively contribute to a cleaner, healthier ocean for all.</p>
+            
+        </div>
+        
+    </section>
+    <section class="section_footer">
+        <div class="footer_pageEditor">
+
+            <p>Done by <a href="pageEditor-S2.html" target="_blank">Nipuna Rajapaksa</a></p>
+            
+        </div>
+
+        <div class="footer">
+
+            <div class="footer_content">
+                
+                <div class="footer_logo">
+                    <img class="footer_img" src="images/logo.jpg" alt="company logo">
+                    <img class="footer_title" src="images/titleFinal.png" alt="website title">
+                </div>
+                <div class="footer_icons">
+                    <h4>Social media</h4>
+                    <a href="https://www.instagram.com/unitednations/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="https://web.facebook.com/groups/greenrangersearth.org/?_rdc=1&_rdr" target="_blank"><i class='bx bxl-facebook' ></i></a>
+                    <a href="https://x.com/UN" target="b"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://www.linkedin.com/company/united-nations/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                </div>
+                
+
+            </div>
+            <div class="footer_content">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="../Student_3/team.html">About US</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="../Student_1/shop.html">Shop</a></li>
+                    <li><a href="../Student_1/cart.html">Cart</a></li>
+                    <li><a href="../Student_4/sitemap.html">Sitemap</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="lifediversity.html">Life Diversity</a></li>
+                    <li><a href="../Student_1/content_S1.html">Tourism</a></li>
+                    <li><a href="../Student_3/content_S3.html">Coral Reefs</a></li>
+                    <li><a href="../Student_4/content_page04.html">Sustainable Practices</a></li>
+
+                </ul>              
+
+            </div>
+
+            <div class="footer_content">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>Tele  : +1-212-963-3209</li>
+                    <li>Email :  population@un.org</li>
+                    <li class="extra_space">director.oisc@un.org</li>
+                </ul>
+
+            </div>
+
+            <div class="footer_content">
+
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="https://www.un.org/en/about-us/terms-of-use" target="_blank">Terms and conditions</a></li>
+                    <li><a href="https://www.un.org/en/about-us/privacy-notice" target="_blank">Privacy policy</a></li>
+                </ul>
+
+            </div>
+    </div>
+    
+    <div class="rights">
+        &copy; 2024 Beneath the waves. All rights reserved.
+    </div>
+
+    </section>
+
+    <script>
+        let basket = JSON.parse(localStorage.getItem("data")) || [];
+
+        /**
+         * This function is to update the basket
+         * The function will get triggered whenever the number on the card is getting updated
+         */
+        let calculation = () => {
+            let cartIcon = document.getElementById("cartAmount");
+            cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x+y, 0);
+            // mapping all the elements to get the number of times an element gets added to the cart
+            /**
+             * mapping will hold a new array with the item count values, so we're using reduce to add them
+             * x in reduce is the first number
+             * y in reduce will be the second number
+             * if map returns [1, 2, 3, 4]
+             * on the start x is 1, y is 2
+             * and then x is 3(1+3) and y is 3. goes till everything gets added
+             */
+        }
+
+        calculation(); // Invoking the function outside so that the cart will be updated at the beginning of the program
+    </script>
+    
+</body>
+</html>

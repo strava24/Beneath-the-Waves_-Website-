@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Splash Screen</title>
+
+    <style>
+        body {
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Overlay */
+                url(images/final_SplashBG.png);
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            color: #A9D6E5;
+        }
+
+        .company-details {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+            margin: 0;
+            transition: 1s;
+        }
+
+        .logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            cursor: auto;
+        }
+
+        .title-image {
+            display: block;
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #slogun {
+            text-align: center;
+            color: #012A4A;
+        }
+
+        .misson-crew {
+            margin: 80px 0 40px 0;
+            text-align: center;
+        }
+
+        .mission{
+            text-align: center;
+            max-width: 800px; 
+            margin: 20px auto; /*To center*/
+            padding: 0 20px; 
+        }
+
+        .crew {
+            max-width: 800px; 
+            margin: 20px auto; /*To center*/
+            padding: 0 20px; 
+        }
+
+        .title {
+            font-size: 30px;
+            color: white;
+        }
+       
+        .crew-member, b {
+            color: #012A4A;
+            font-weight: bold;
+        }
+
+        /*Loading animations*/
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw; 
+            height: 100vh; /*To fix the loading animation on the center of the page*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loader::after {
+            content: "";
+            width: 75px;
+            height: 75px;
+            border: 2px solid #dddddd;
+            border-top-color: blue;
+            border-radius: 50%;
+            animation: loading 0.75s ease infinite;
+        }
+
+        @keyframes loading {
+            from {
+                transform: rotate(0turn);
+            }
+            to {
+                transform: rotate(1turn);
+            }
+        }
+
+        /*End of loading animations*/
+
+    </style>
+
+</head>
+<body>
+    <div class="company-details">
+        <div class="content">
+            <img src="images/logo.jpg" alt="Logo" class="logo"> <!--Logo-->
+            <img src="images/titleFinal.png" alt="Title Image" class="title-image">
+            <p id="slogun">-Unveiling the Mysteries Beneath-</p>
+        </div>
+    </div>
+
+    <div class="loader"></div>
+
+    <div class="misson-crew">
+        <div class="mission">
+            <h3 class="title">Our Mission</h3>
+            <p>
+                Welcome to our <b>Life Below Water</b> page, dedicated to <b><i>promoting sustainable practices</i></b> and <b><i>protecting marine ecosystems</i></b>.<br> 
+                Join us in advocating for a healthier, more sustainable future for our oceans and marine life.
+            </p>
+        </div>
+        <div class="crew">
+            <h3 class="title">Our Crew</h3>
+
+            <p>
+                <span class="crew-member">Robosriyas Fernando</span> | 
+                <span class="crew-member">Nipuna Rajapaksa</span> | 
+                <span class="crew-member">Sasanka De-Zoyza</span> | 
+                <span class="crew-member">Rishaanth Rajkumar</span>
+            </p>
+
+        </div>
+    </div>
+
+
+    <div class="footer_pageEditor">
+        <p>Done by <a href="pageEditor_S1.html" target="_blank">Robosriyas Fernando</a></p>
+    </div>
+
+    <script>
+        setTimeout( () => {
+            window.location.href = '../Student_2/home.html';
+        }, 4000); // Redirecting to the home page after 4 seconds
+    </script>
+
+</body>
+</html>

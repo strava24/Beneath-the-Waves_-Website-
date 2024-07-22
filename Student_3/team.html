@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="teamcss.css">
+</head>
+<body>
+    <script>
+        document.addEventListener('scroll',()=>{
+            const header = document.querySelector("header");
+
+            if(window.scrollY >0){
+                header.classList.add("scrolled");
+
+            }else {
+                header.classList.remove("scrolled")
+            }
+        })
+    </script>
+    <header>
+        <div class="company-logo">
+            <img class="logo" src="images/logo.jpg" alt="logo">
+            <img src="images/titleFinal.png" alt="title" class="company-title">
+        </div>
+        
+        <nav>
+            <ul class="nav_links">
+                <li><a href="../Student_2/home.html">Home</a></li>
+                <li><a href="team.html">About Us</a></li>
+                <li><a href="../Student_1/shop.html">Shop</a></li>
+                <li><a href="../Student_4/sitemap.html">Sitemap</a></li>
+                <li><a href="../Student_4/gallery.html">Gallery</a></li>
+                <li><a href="../Student_2/feedback.html">Feedback</a></li>
+            </ul>
+
+        </nav>
+        <a href="cart.html">
+            <div class="cart">
+                <i class="bi bi-cart"></i> <!--Shopping cart logo from bootsrtap-logos-->
+                <div id="cartAmount" class="cartAmount">0</div> <!--Initially the item count on the cart will be 0-->
+            </div>
+        </a>
+
+        <div class="buttons">
+            <a  href="profile.html"><button>Signup</button></a>
+        </div>
+
+    </header>
+    <section class="members-section">
+        <div class="members-title">
+            <h1>Meet our team</h1>
+        </div>
+        <div class="member-cards">
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="images/member1.jpg" alt="Stravanske Fernando">
+                </div>
+                <div class="member-info">
+                    <h3>Stravakske Fernando</h3>
+                    <p>Student 1</p>
+                </div>
+                <div class="member-details">
+                    <p class="membio">Stravanske is a passionate student about computer science and technology.</p>
+                    <p class="tasks">Webpages designed and implemented:</p>
+                    <ul class="tasks-list">
+                        <li>Splash-screen</li>
+                        <li>Shop</li>
+                        <li>Content page</li>
+                    </ul>
+                    <p class="contactn">Contact: stravanske@gmail.com</p>
+                </div>
+            </div>
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="images/member2.jpg" alt="Nipuna Rajapaksa">
+                </div>
+                <div class="member-info">
+                    <h3>Nipuna Rajapaksa</h3>
+                    <p>Student 2</p>
+                </div>
+                <div class="member-details">
+                    <p class="membio">Nipuna loves coding and enjoys working on innovative projects.</p>
+                    <p class="tasks">Webpages designed and implemented:</p>
+                    <ul class="tasks-list">
+                        <li>Homepage</li>
+                        <li>Feedback form</li>
+                        <li>Content page</li>
+                    </ul>
+                    <p class="contactn">Contact: rajapaksanipuna@gmail.com</p>
+                </div>
+            </div>
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="images/member3.jpg" alt="Sasanka De Zoysa">
+                </div>
+                <div class="member-info">
+                    <h3>Sasanka De Zoysa</h3>
+                    <p>Student 3</p>
+                </div>
+                <div class="member-details">
+                    <p class="membio">Sasanka is a creative thinker who excels in problem-solving.</p>
+                    <p class="tasks">Webpages designed and implemented:</p>
+                    <ul class="tasks-list">
+                        <li>Team page</li>
+                        <li>Profile</li>
+                        <li>Content page</li>
+                    </ul>
+                    <p class="contactn">Contact: mgsasanka@yahoo.com</p>
+                </div>
+            </div>
+            <div class="member-card">
+                <div class="member-image">
+                    <img src="images/member4.jpg" alt="Rishaanth Rajkumar">
+                </div>
+                <div class="member-info">
+                    <h3>Rishaanth Rajkumar</h3>
+                    <p>Student 4</p>
+                </div>
+                <div class="member-details">
+                    <p class="membio">Rishaanth is passionate about web development and design.</p>
+                    <p class="tasks">Webpages designed and implemented:</p>
+                    <ul class="tasks-list">
+                        <li>Gallery</li>
+                        <li>Sitemap</li>
+                        <li>Content page</li>
+                    </ul>
+                    <p class="contactn">Contact: rishaanth@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section_footer">
+        <div class="footer_pageEditor">
+            <p>Done by <a href="pageEditor-S3.html" target="_blank">Sasanka De Zoysa</a></p>
+        </div>        
+        
+        <div class="footer">
+            <div class="footer_content">
+                <div class="footer_logo">
+                    <img class="footer_img" src="images/logo.jpg" alt="company logo">
+                    <img class="footer_title" src="images/titleFinal.png" alt="website title">
+                </div>
+                <div class="footer_icons">
+                    <h4>Social media</h4>
+                    <a href="https://www.instagram.com/unitednations/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="https://web.facebook.com/groups/greenrangersearth.org/?_rdc=1&_rdr" target="_blank"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://x.com/UN" target="_blank"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.linkedin.com/company/united-nations/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+            <div class="footer_content">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="../Student_2/home.html">Home</a></li>
+                    <li><a href="team.html">About US</a></li>
+                    <li><a href="../Student_2/feedback.html">Feedback</a></li>
+                    <li><a href="../Student_1/shop.html">Shop</a></li>
+                    <li><a href="../Student_1/cart.html">Cart</a></li>
+                    <li><a href="../Student_4/sitemap.html">Sitemap</a></li>
+                    <li><a href="../Student_4/gallery.html">Gallery</a></li>                    
+                    <li><a href="../Student_2/lifediversity.html">Life Diversity</a></li>
+                    <li><a href="../Student_1/content_S1.html">Tourism</a></li>
+                    <li><a href="content_S3.html">Coral Reefs</a></li>
+                    <li><a href="../Student_4/content_page04.html">Sustainable Practices</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer_content">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>Tele  : +1-212-963-3209</li>
+                    <li>Email : population@un.org</li>
+                    <li class="extra_space">director.oisc@un.org</li>
+                </ul>
+            </div>
+    
+            <div class="footer_content">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="https://www.un.org/en/about-us/terms-of-use" target="_blank">Terms and conditions</a></li>
+                    <li><a href="https://www.un.org/en/about-us/privacy-notice" target="_blank">Privacy policy</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="rights">
+            &copy; 2024 Beneath the waves. All rights reserved.
+        </div>
+    </section>
+
+    <script>
+        let basket = JSON.parse(localStorage.getItem("data")) || [];
+
+        /**
+         * This function is to update the basket
+         * The function will get triggered whenever the number on the card is getting updated
+         */
+        let calculation = () => {
+            let cartIcon = document.getElementById("cartAmount");
+            cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x+y, 0);
+            // mapping all the elements to get the number of times an element gets added to the cart
+            /**
+             * mapping will hold a new array with the item count values, so we're using reduce to add them
+             * x in reduce is the first number
+             * y in reduce will be the second number
+             * if map returns [1, 2, 3, 4]
+             * on the start x is 1, y is 2
+             * and then x is 3(1+3) and y is 3. goes till everything gets added
+             */
+        }
+
+        calculation(); // Invoking the function outside so that the cart will be updated at the beginning of the program
+    </script>
+
+</body>
+</html>
+
+
+

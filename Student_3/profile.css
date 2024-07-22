@@ -1,0 +1,141 @@
+body {
+    background: url("images/Stock_underwaterturtle.jpg") center center / cover no-repeat;
+    color: #f0f8ff; /* Light blue text */
+    
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 70vh;
+}
+
+.create-profile {
+    text-align: center;
+    padding: 20px;
+    flex-grow: 1;
+    width: 90%;
+    max-width: 900px;
+    background: rgba(0, 64, 128, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
+
+h1, h2 {
+    color: #7FDBFF; /* Light blue for headings */
+}
+
+button {
+    background-color: #0074D9; /* Brighter blue for button */
+    color: #f0f8ff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #004080;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.progress-bar {
+    width: 0;
+    height: 20px;
+    background-color: #7FDBFF;
+    border-radius: 10px;
+    transition: width 0.3s;
+}
+
+.user-details {
+    background-color: #004080;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    text-align: left;
+}
+
+.questions-container {
+    background-color: #004080;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    display: none;
+}
+
+#responseInput, #responseInputDropdown {
+    padding: 10px;
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.actions-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.actions-container button {
+    margin: 5px;
+}
+
+#progressPercentage {
+    color: #f0f8ff;
+}
+
+.modal {
+    display: none; /* Default hidden */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #004080;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+    color: #7FDBFF;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.closeButton {
+    background-color: #0074D9;
+    color: #f0f8ff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.closeButton:hover {
+    background-color: #005bb5;
+}

@@ -1,0 +1,137 @@
+body {
+    min-height: 100vh;
+    background: url("images/Stock_underwater.jpg") center center / cover no-repeat;
+    overflow: hidden; /* Prevent scroll bar */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.members-section {
+    margin-top: 80px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-in-out forwards;
+    animation-delay: 0.2s; 
+    flex-grow: 1; /* Allow the section to grow to fill available space */
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.members-title h1 {
+    font-size: 75px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.member-cards {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+}
+
+.member-card {
+    background-color: #001d3d;
+    border-radius: 50px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 0px 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.6s ease, height 0.6s ease;
+    width: calc(25% - 20px);
+    overflow: hidden;
+    height: 300px;
+}
+
+.member-card:hover {
+    transform: translateY(-12px);
+    height: 500px;
+}
+
+.member-image img {
+    border-radius: 50%;
+    height: 135px;
+    width: 135px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.member-info h3 {
+    color: #fff;
+    font-size: 27px;
+    margin: 0px 0px;
+}
+
+.member-info p {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 2px 0px;
+}
+
+.member-details {
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: 15px;
+    display: none;
+}
+
+.member-details .membio {
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.member-details .tasks {
+    font-size: 16px;
+    margin-bottom: 3px;
+    color: #ffffff; /* Custom color for tasks title */
+}
+
+.member-details .tasks-list {
+    list-style-type: disc; /* Use bullet points */
+    padding-left: 0; /* Remove default padding */
+    text-align: left; /* Left-align the list items */
+    display: inline-block; /* Make the list inline-block to center it */
+}
+
+.member-details .tasks-list li {
+    margin-bottom: 0px;
+}
+
+.member-details .contactn {
+    font-size: 15px;
+    margin-top: 5px;
+    color: #ADE8F4; /* Custom color for contact */
+    text-align: center; /* Center-align the contact information */
+}
+
+.member-card:hover .member-details {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .member-cards {
+        display: flex;
+        flex-direction: column;
+    }
+    .member-card {
+        width: 85%;
+        margin: 50px auto;
+    }
+}
+
+
+
+

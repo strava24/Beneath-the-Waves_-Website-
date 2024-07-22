@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="content_page04.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>Sustainable Fishing Practices</title>
+    <link rel="icon" href="images/logo.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <script>
+    
+        document.addEventListener('scroll',()=>{
+            const header = document.querySelector("header");
+
+            if(window.scrollY >0){
+                header.classList.add("scrolled");
+
+            }else {
+                header.classList.remove("scrolled")
+            }
+        })
+    </script>
+    <header>
+        <div class="company-logo">
+            <img class="logo" src="images/logo.jpg" alt="logo">
+            <img src="images/titleFinal.png" alt="title" class="company-title">
+        </div>
+        
+        <nav>
+            <ul class="nav_links">
+                <li><a href="../Student_2/home.html">Home</a></li>
+                <li><a href="../Student_3/team.html">About Us</a></li>
+                <li><a href="../Student_1/shop.html">Shop</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="../Student_2/feedback.html">Feedback</a></li>
+            </ul>
+
+        </nav>
+
+        <a href="../Student_1/cart.html">
+            <div class="cart">
+                <i class="bi bi-cart"></i> <!--Shopping cart logo from bootsrtap-logos-->
+                <div id="cartAmount" class="cartAmount">0</div> <!--Initially the item count on the cart will be 0-->
+            </div>
+        </a>
+
+        <div class="buttons">
+            <a  href="../Student_3/profile.html" class="button">Signup</a>
+        </div>
+
+    </header>
+    <p id="top">.</p>
+
+    <div class="content_heading">
+        <h1>SUSTAINABLE FISHING PRACTICES</h1>
+    </div>
+
+    <div class="internal">
+        <ul>
+            <li><a href="#intro" class="text">Introduction</a></li>
+            <li><a href="#importance" class="text">Importance of Sustainable Fishing</a></li>
+            <li><a href="#sustainable" class="text">Sustainable Fishing Method</a></li>
+            <li><a href="#conclusion" class="text">Conclusion</a></li>
+        </ul>
+    </div>
+    <br><br><br><br>
+    <hr>
+
+    <div class="main-container">
+        <div class="content-continer">
+
+            <div class="box one" style="--img:url(images/fishing_gear.jpg)" data-text="Selective Fishing gear technology" data-description="Reducing bycatch and other marine life that is mistakenly caught and frequently discarded can be made easier by the use of gear that only catches the targeted species. Examples are fishing with a hook and line or using traps that let in the unwanted species.">
+                <span>"Selective Fishing Gear Technology</span>
+            </div>
+            <div class="box two" style="--img:url(images/season_fishing.jpg)" data-text="Seasonal Fishing" data-description="Fish can reproduce and expand when fishing occurs at specific periods of the year. Observing the breeding seasons contributes to the health of fish populations.">
+                <span>Seasonal Fishing</span>
+            </div>
+            <div class="box three" style="--img:url(images/overfishing.jpg)" data-text="Limiting catch amount" data-description="Limiting the amount of fish that can be taken in helps in the prevention of overfishing. To guarantee that fish populations can grow back, these restrictions are supported by scientific evidence.">
+                <span>Limiting Catch Amount</span>
+            </div>
+            <div class="box four" style="--img:url(images/no_fishing.png)" data-text="Fishing Restricted Areas" data-description="Fish populations and habitats can be restored by creating MPAs (Marine Protected Areas), where fishing is either forbidden or severely regulated. For example, the Great Barrier Reef has certain regions off-limits to fishing, which contributes to the ecosystem's recovery and health.">
+                <span>Fishing Restricted Areas</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="body_paragraph" id="intro">
+        <h2>Introduction</h2>
+        <p>The health of the ocean and stable fish populations depend on sustainable fishing. A significant problem that endangers many fish species and harms marine ecosystems is overfishing. Unsustainable activities upset the delicate balance of ocean ecosystems by harming other marine species, reducing fish populations, and destroying their habitats. Oceans help to generate more than half of the world's oxygen and consume a considerable portion of carbon dioxide, which makes them essential to the planet's health. On the other hand, rising seafood consumption threatens marine life's sustainability. By preserving marine ecosystems and ensuring that fish populations are healthy, sustainable fishing methods help to avoid fish population to risk and its negative effects on the environment, economy, and eco-system. This leads into the significance of sustainable fishing practices, including certification, laws, and individual efforts towards this goal. </p>
+    </div>
+
+    <div class="body_paragraph" id="importance">
+        <h2>Importance of Sustainable Fishing</h2>
+        <dl>
+            <dt>Environment Impact :</dt>
+            <dd>Marine ecosystems are kept in balance by sustainable fishing practices. It maintains the health of fish populations as well as the safety of other marine species, such as seabirds and coral reefs.</dd>
+
+            <dt>Economical Benefit :</dt>
+            <dd>Sustainable fishing maintains fishing communities in the long term by preserving fish populations. Stable fish populations ensure a consistent income stream for fishermen and other sectors.</dd>
+
+            <dt>Social Impact :</dt>
+            <dd>Food security is supported by sustainable fishing. Fish serves as a major source of protein for a large number of individuals worldwide. We can make sure there are enough fish to fulfil these demands by practicing sustainable fishing.</dd>
+
+            <dt>Protection of Biodiversity :</dt>
+            <dd>The variety of marine life is preserved by sustainable fishing methods. Ocean ecosystems that are strong and productive depend on this richness.</dd>
+        </dl>
+
+    </div>
+
+    <div class="body_paragraph" id="sustainable">
+        <h2>Sustainable Fishing Methods</h2>
+        <dl>
+            <dt>Selective Fishing Gear :</dt>
+            <dd>Reducing bycatch and other marine life that is mistakenly caught and frequently discarded can be made easier by the use of gear that only catches the targeted species. Examples are fishing with a hook and line or using traps that let in the unwanted species.</dd>
+
+            <dt>Limiting catch amount :</dt>
+            <dd>Limiting the amount of fish that can be taken in helps in the prevention of overfishing. To guarantee that fish populations can grow back, these restrictions are supported by scientific evidence.</dd>
+
+            <dt>Seasonal Fishing  :</dt>
+            <dd>Fish can reproduce and expand when fishing occurs at specific periods of the year. Observing the breeding seasons contributes to the health of fish populations.</dd>
+
+            <dt>Implementing Protected Areas  :</dt>
+            <dd>Fish populations and habitats can be restored by creating MPAs (Marine Protected Areas), where fishing is either forbidden or severely regulated. For example, the Great Barrier Reef has certain regions off-limits to fishing, which contributes to the ecosystem's recovery and health.</dd>
+        </dl>
+
+    </div>
+
+    <div class="body_paragraph" id="conclusion">
+        <h2>Conclusion</h2>
+        <p>In addition to assisting local populations everywhere with their everyday needs, sustainable fishing seeks to maintain the balance of whole marine ecosystems, not just fish supplies. By using sustainable fishing techniques, we preserve the long term health of the oceans, which is crucial for the climate, economy, and food security of the globe. We can all make a difference by educating ourselves, standing up for moral laws, and spreading awareness. Together, we can make sure that our oceans remain alive and well and continue to provide food for years to come. Let's commit to making global sustainable fishing a top priority.</p>
+
+    </div>
+
+    <div class="top">
+        <a href="#top" class="buttons">
+            <i class="bi bi-arrow-up-circle"></i>
+        </a>
+    </div>
+
+    <section class="section_footer">
+        <div class="footer_pageEditor">
+
+            <p>Done by <a href="page_editorS4.html" target="_blank">Rishaanth Rajkumar</a></p>
+            
+        </div>
+
+        <div class="footer">
+
+            <div class="footer_content">
+                
+                <div class="footer_logo">
+                    <img class="footer_img" src="images/logo.jpg" alt="company logo">
+                    <img class="footer_title" src="images/titleFinal.png" alt="website title">
+                </div>
+                <div class="footer_icons">
+                    <h4>Social media</h4>
+                    <a href="https://www.instagram.com/unitednations/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="https://web.facebook.com/groups/greenrangersearth.org/?_rdc=1&_rdr" target="_blank"><i class='bx bxl-facebook' ></i></a>
+                    <a href="https://x.com/UN" target="b"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://www.linkedin.com/company/united-nations/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                </div>
+                
+
+            </div>
+            <div class="footer_content">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="../Student_2/home.html">Home</a></li>
+                    <li><a href="../Student_3/team.html">About US</a></li>
+                    <li><a href="../Student_2/feedback.html">Feedback</a></li>
+                    <li><a href="../Student_1/shop.html">Shop</a></li>
+                    <li><a href="../Student_1/cart.html">Cart</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="../Student_2/lifediversity.html">Life Diversity</a></li>
+                    <li><a href="../Student_1/content_S1.html">Tourism</a></li>
+                    <li><a href="../Student_3/content_S3.html">Coral Reefs</a></li>
+                    <li><a href="content_page04.html">Sustainable Practices</a></li>
+                </ul>              
+
+            </div>
+
+            <div class="footer_content">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>Tele  : +1-212-963-3209</li>
+                    <li>Email :  population@un.org</li>
+                    <li class="extra_space">director.oisc@un.org</li>
+                </ul>
+
+            </div>
+
+            <div class="footer_content">
+
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="https://www.un.org/en/about-us/terms-of-use" target="_blank">Terms and conditions</a></li>
+                    <li><a href="https://www.un.org/en/about-us/privacy-notice" target="_blank">Privacy policy</a></li>
+                </ul>
+
+            </div>
+    </div>
+    
+    <div class="rights">
+        &copy; 2024 Beneath the waves. All rights reserved.
+    </div>
+
+    </section>
+
+</body>
+</html>

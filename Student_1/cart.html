@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!--Adding bootstrap icons to the page-->
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        
+        body {
+            background-image: url(images/gradient_BG.jpg);
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column; /*Changing the flex direction to column*/
+            padding: 10px;
+            gap: 10px;
+        }
+
+        .details h3 {
+            text-align: left;
+        }
+
+        .price-quantity {
+            display: flex; /*default flex direction is row*/
+            justify-content: space-between; /*This property works on the x axis*/
+            align-items: center; /*This property works on the y axix*/
+        }
+
+        .count-buttons {
+            display: flex;
+            gap: 8px;
+            font-size: 20px;
+            justify-content: right;
+        }
+
+        i { /*Changing the cursor for bootstap elements*/
+            cursor: pointer;
+        }
+
+        .bi-dash, .bi-trash {
+            color: red;
+            font-weight: bold;
+        }
+
+        .bi-plus {
+            color: green;
+            font-weight: bold;
+        }
+
+        .bi-dash:hover, .bi-plus:hover, .bi-trash:hover {
+            transform: scale(1.2);
+        }
+
+        .text-center {
+            text-align: center;
+            margin: 20px;
+        }
+
+        /*Styling the shopping cart on cart.html*/
+        .shopping-cart {
+            display: grid;
+            grid-template-columns: repeat(2, 320px);
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        /*Styling the cart items on cart.html*/
+        .cart-item {
+            border: 2px solid black;
+            border-radius: 10px;
+            display: flex;
+            background-color: #A9D6E5;
+        }
+
+        .cart-item img {
+            border-radius: 10px;
+        }
+
+        .title-x {
+            width: 195px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .title {
+            color: #012A4A;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .total-price {
+            background-color: #012A4A;
+            color: white;
+            padding: 3px 6px;
+            border-radius: 4px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .price-buttons {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .cart-label {
+            color: #A9D6E5;
+        }
+
+        #checkout-btn {
+            width: 20px;
+            margin-top: 10px;
+            margin-left: 780px;
+        }
+
+        #home-btn {
+            width: 133px;
+            margin-top: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .empty-cart {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 300px;
+        }
+
+
+        #home-btn:hover, #checkout-btn:hover, #signup-btn:hover {
+            transform: translateY(-6px);
+        }
+    </style>
+
+</head>
+<body>
+    <script>
+    
+        document.addEventListener('scroll',()=>{
+            const header = document.querySelector("header");
+
+            if(window.scrollY >0){
+                header.classList.add("scrolled");
+
+            }else {
+                header.classList.remove("scrolled")
+            }
+        })
+    </script>
+    <header>
+        <div class="company-logo">
+            <img class="logo" src="images/logo.jpg" alt="logo">
+            <img src="images/titleFinal.png" alt="title" class="company-title">
+        </div>
+        
+        <nav>
+            <ul class="nav_links">
+                <li><a href="../Student_2/home.html">Home</a></li>
+                <li><a href="../Student_3/team.html">About Us</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="../Student_4/sitemap.html">Sitemap</a></li>
+                <li><a href="../Student_4/gallery.html">Gallery</a></li>
+                <li><a href="../Student_2/feedback.html">Feedback</a></li>
+            </ul>
+
+        </nav>
+
+        <a href="cart.html">
+            <div class="cart">
+                <i class="bi bi-cart"></i> <!--Shopping cart logo from bootsrtap-logos-->
+                <div id="cartAmount" class="cartAmount">0</div> <!--Initially the item count on the cart will be 0-->
+            </div>
+        </a>
+
+        <div class="buttons">
+            <a  href="../Student_3/profile.html" class="button">Signup</a>
+        </div>
+
+    </header>
+
+    <div id="label" class="text-center"></div> <!--A lebel for the cart page-->
+    <div class="shopping-cart" id="shopping-cart"></div>
+
+    <section class="section_footer">
+        <div class="footer_pageEditor">
+
+            <p>Done by <a href="pageEditor_S1.html" target="_blank">Robosriyas Fernando</a></p>
+            
+        </div>
+
+        <div class="footer">
+
+            <div class="footer_content">
+                
+                <div class="footer_logo">
+                    <img class="footer_img" src="images/logo.jpg" alt="company logo">
+                    <img class="footer_title" src="images/titleFinal.png" alt="website title">
+                </div>
+                <div class="footer_icons">
+                    <h4>Social media</h4>
+                    <a href="https://www.instagram.com/unitednations/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="https://web.facebook.com/groups/greenrangersearth.org/?_rdc=1&_rdr" target="_blank"><i class='bx bxl-facebook' ></i></a>
+                    <a href="https://x.com/UN" target="b"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://www.linkedin.com/company/united-nations/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                </div>
+                
+
+            </div>
+            <div class="footer_content">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="../Student_2/home.html">Home</a></li>
+                    <li><a href="../Student_3/team.html">About US</a></li>
+                    <li><a href="../Student_2/feedback.html">Feedback</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="../Student_4/sitemap.html">Sitemap</a></li>
+                    <li><a href="../Student_4/gallery.html">Gallery</a></li>
+                    <li><a href="../Student_2/lifediversity.html">Life Diversity</a></li>
+                    <li><a href="content_S1.html">Tourism</a></li>
+                    <li><a href="../Student_3/content_S3.html">Coral Reefs</a></li>
+                    <li><a href="../Student_4/content_page04.html">Sustainable Practices</a></li>
+
+                </ul>              
+
+            </div>
+
+            <div class="footer_content">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>Tele  : +1-212-963-3209</li>
+                    <li>Email :  population@un.org</li>
+                    <li class="extra_space">director.oisc@un.org</li>
+                </ul>
+
+            </div>
+
+            <div class="footer_content">
+
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="https://www.un.org/en/about-us/terms-of-use" target="_blank">Terms and conditions</a></li>
+                    <li><a href="https://www.un.org/en/about-us/privacy-notice" target="_blank">Privacy policy</a></li>
+                </ul>
+
+            </div>
+    </div>
+    
+    <div class="rights">
+        &copy; 2024 Beneath the waves. All rights reserved.
+    </div>
+
+    </section>
+
+    <script>
+        let label = document.getElementById("label");
+        let shoppingCart = document.getElementById("shopping-cart");
+
+        let basket = JSON.parse(localStorage.getItem("data")) || []; // This basket is to keep track of all the products on the cart and pull data from the local storage
+
+        let shop = document.getElementById("shop"); // Targetting the shop
+
+        let shopItemsData = [ // Defining items as objects 
+            {
+                id: "hoodie",
+                name: "'Turtle Haven Hoodie'",
+                price: 30,
+                desc: "Exclusive Merch Hoodie Featuring Our Iconic Logo",
+                img: "images/merch_hoodie.png"
+            },
+            {
+                id: "tshirt",
+                name: "'Turtle Haven Tee'",
+                price: 5,
+                desc: "Exclusive Merch Tee Featuring Our Iconic Logo",
+                img: "images/merch_finalT.png"
+            },
+            {
+                id: "cap",
+                name: "'Turtle Haven Cap'",
+                price: 3,
+                desc: "Exclusive Merch Cap Featuring Our Iconic Logo",
+                img: "images/merch_cap.png"
+            },
+            {
+                id: "notebook",
+                name: "'Turtle Haven Book'",
+                price: 2,
+                desc: "Exclusive Merch NoteBook Featuring Our Iconic Logo",
+                img: "images/merch_notebookFinal.jpg"
+            },
+            {
+                id: "mug",
+                name: "'Turtle Haven Mug'",
+                price: 6,
+                desc: "Exclusive Merch Mug Featuring Our Iconic Logo",
+                img: "images/merch_mug_final.png"
+            },
+            {
+                id: "bag",
+                name: "'Whale Song Tote'",
+                price: 8,
+                desc: "Exclusive Whale-themed Tote Bag in Oceanic Hues",
+                img: "images/merc-finalbag.jpeg"
+            },
+            {
+                id: "wallStickers",
+                name: "'Oceanic Life Decals'",
+                price: 10,
+                desc: "Exclusively Elegant Sea Creatures Wall Stickers",
+                img: "images/merch_stickers.avif"
+            },
+            {
+                id: "sculpture",
+                name: "'Dolphin Sculpture'",
+                price: 20,
+                desc: "Handcrafted Dolphin Sculpture",
+                img: "images/merch_sculpture.jpg"
+            },
+            {
+                id: "beachKit",
+                name: "'Coastal Escape Kit'",
+                price: 30,
+                desc: "Beach Essentials Kit: Flip Flops, Towel, Sunglasses",
+                img: "images/merch_beachkit.png"
+            },
+            {
+                id: "painting1", // id should be unique for each item on the cart so that JS will be able to recognize the product to do the calculations
+                name: "'Ocean Symphony'",
+                price: 100,
+                desc: "Exclusive Painting of Ocean Waves in Vibrant Blues",
+                img: "images/Ocean-Symphony_final.png"
+            },
+            {
+                id: "paiting2",
+                name: "'Seahorse Serenade'",
+                price: 80,
+                desc: "Exclusive Painting of Seahorse Dreams",
+                img: "images/final_painting.jpg"
+            },
+            {
+                id: "carePack",
+                name: "'Oceanic Men's Care'",
+                price: 40,
+                desc: "Men's Essentials Kit: Watch, Bottle, Perfume",
+                img: "images/merch_finalPackage.png"
+            }
+        ];
+
+        /**
+         * This function is to update the basket
+         * The function will get triggered whenever the number on the card is getting updated
+         */
+         let calculation = () => {
+            let cartIcon = document.getElementById("cartAmount");
+            cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x+y, 0);
+            // mapping all the elements to get the number of times an element gets added to the cart
+            /**
+             * mapping will hold a new array with the item count values, so we're using reduce to add them
+             * x in reduce is the first number
+             * y in reduce will be the second number
+             * if map returns [1, 2, 3, 4]
+             * on the start x is 1, y is 2
+             * and then x is 3(1+3) and y is 3. goes till everything gets added
+             */
+        }
+
+        calculation(); // Invoking the function outside so that the cart will be updated at the beginning of the program
+
+        let generateCartItems = () => {
+            if (basket.length !== 0) { // 
+                return shoppingCart.innerHTML = basket.map((x) => { // The x on this ES5 function will hold the individual objects on the array
+                    let {id, item} = x; // Thi is to easily access the id and the item from the object on the array
+                    let search = shopItemsData.find((y) => y.id === id) || []; // going through the ids on the araay shopItemsData and if we find it it to be on the basket we're returning it
+
+                    return `
+                    <div class="cart-item">
+                       <img src= ${search.img} width = "100">
+                        <div class = "details">
+                            <div class = "title-x">
+                                <h4 class="title">
+                                    ${search.name}
+                                </h4>
+                                <i onclick="deleteItem(${id})" class="bi bi-trash"></i>
+                            </div>
+
+                            <p class="total-price">$ ${item * search.price}</p>
+                            
+                            <div class="price-buttons">
+                                <h3>$ ${search.price}</h3>
+
+                                <div class="count-buttons">
+                                    <i onclick="decrement(${x.id})" class="bi bi-dash"></i> <!--Triggering decrement function on click, Passing id as a parameter so that JS will be able to identify the current item-->
+                                    <div class="quantity" id=${x.id}>${item}</div>
+                                    <i onclick="increment(${x.id})" class="bi bi-plus"></i> <!--Triggering increment function on click-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                }).join("");
+            }
+            else { // when there are no products on the cart
+                shoppingCart.innerHTML = ``; // Not doing anything for shopping cart when there are no products on the cart
+
+                // Modifing the label
+                label.innerHTML = `
+                <h2 class = "cart-label">Cart is Empty!</h2>
+                <div class="buttons" id="home-btn">
+                    <a href="#shop" class="button">Back to Home</i></a>
+                </div>
+                <img src="images/cart-empty.png" alt="Empty cart!" class="empty-cart">
+                `
+            }
+        }
+
+        generateCartItems();
+
+        let increment = (id)=> { // ES6 function to increment the product count when the user clicks on the +
+            let selectedItem = id;
+            
+            // selectedItem.id will give the id of the selectedItem
+            let search = basket.find((x)=> x.id === selectedItem.id); // This variable is to check if the currently incremented item is already on the basket by comparing the object's id which is unique
+            // Es6 function to search the basket for the cuurent item
+
+            if(search === undefined) { // Creating a new object on the basket if the currently selected item is not on the basket already
+                basket.push({
+                    id: selectedItem.id,
+                    item: 1
+                });
+            }
+            else {
+                search.item += 1; // incrementing the item count by 1 if the item already exists, search will hold the referance for the current item
+            }
+
+            update(selectedItem.id);
+
+            generateCartItems(); // Rerendering the cards when + is clicked so that when the user clicks on + then the price of the card gets updated
+
+            localStorage.setItem("data", JSON.stringify(basket)); // This step is to locally save the basket, so that the data wont be lost when we refresh the page
+            // data will be the key
+        }
+
+        let decrement = (id)=> { // ES6 function to decrement the product count when the user clicks on the -
+            let selectedItem = id;
+
+            // selectedItem.id will give the id of the selectedItem
+            let search = basket.find((x)=> x.id === selectedItem.id); // This variable is to check if the currently incremented item is already on the basket by comparing the objec's id which is unique
+            // ES6 function to search the basket for the current item
+            
+            if (search === undefined || search.item === 0) {
+                /**
+                 * Search is undefined if the current item is not on the basket
+                 * Search is 0 if the current object was on the basket and then made to 0
+                 */
+                alert("This item is not on the cart!"); // Giving an alert that this item is not on the cart
+                return; // returning to prevent the program from crashing
+            }
+            else {
+                search.item -= 1; // incrementing the item count by 1 if the item already exists, search will hold the referance for the current item
+            }
+            
+            update(selectedItem.id); // Updaing the basket and then filtering it
+            basket = basket.filter((x) => x.item !== 0); // removing the products with item count 0 from the cart
+            
+            generateCartItems(); // Generating the shop again so that when a product count becomes 0 then the product card gets removed from the screen
+
+            localStorage.setItem("data", JSON.stringify(basket)); // This step is to locally save the number of items we have selected, so thst the data wont be lost when we refresh the page
+        }
+
+        /**
+         * This funnction is to calculate the number the user has choosen an item.
+         * This function will be triggered whenever the user clicks on + / -
+         */
+         let update = (id)=> { 
+            let search = basket.find((x) => x.id === id);
+            document.getElementById(id).innerHTML = search.item; // Getting the object by id and then updating the number using innerHTML
+            calculation(search.item); // Everytime the update function is triggered the calculation function will also get triggered
+
+            calculateTotalAmount(); // Updating the label everytime +/- gets clicked
+
+        }
+
+        let deleteItem = (id) => {
+            let confirmation = confirm("Would you like to delete this item from the basket?"); // Getting a confirmation from the user to delete the item
+
+            if (confirmation) {
+                let selectedItem = id;
+
+                basket = basket.filter((x) => x.id !== selectedItem.id); // The items that gets deleted is getting reoved from the basket
+                generateCartItems(); // re-rendering all the cards when user deletes a card
+
+                calculateTotalAmount(); // Updating the label when a product gets removed from the cart
+                localStorage.setItem("data", JSON.stringify(basket)); // Updating the local storage
+
+                calculation();
+            }
+
+        }
+
+        let calculateTotalAmount = () => {
+            if (basket.length !== 0) {
+                let amount = basket.map((x) => {
+                    let { item, id } = x;
+                    let search = shopItemsData.find((y) => y.id === id) || []; // going through the ids on the araay shopItemsData and if we find it it to be on the basket we're returning it
+                    return item * search.price;
+                }).reduce((x, y) => (x+y), 0); // Getting the total using the reduce method
+
+                label.innerHTML = `
+            <h2 class="cart-label">Total Bill : $ ${amount}</h2>
+            <div class="buttons" id="checkout-btn">
+                <a href="checkout.html" class="button">Checkout</a>
+            </div>
+            `
+            }
+            else
+                return;
+        }
+        calculateTotalAmount();
+    </script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="icon" href="images/logo.jpg" type="image/x-icon">
+
+    <style>
+        body {
+            background-image: url(images/homewater.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+
+</head>
+<body>
+    <script>
+    
+        document.addEventListener('scroll',()=>{
+            const header = document.querySelector("header");
+
+            if(window.scrollY >0){
+                header.classList.add("scrolled");
+
+            }else {
+                header.classList.remove("scrolled")
+            }
+        })
+    </script>
+    <header>
+        <div class="company-logo">
+            <img class="logo" src="images/logo.jpg" alt="logo">
+            <img src="images/titleFinal.png" alt="title" class="company-title">
+        </div>
+        
+        <nav>
+            <ul class="nav_links">
+                <li><a href="../Student_2/home.html">Home</a></li>
+                <li><a href="../Student_3/team.html">About Us</a></li>
+                <li><a href="../Student_1/shop.html">Shop</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="../Student_2/feedback.html">Feedback</a></li>
+            </ul>
+
+        </nav>
+
+        <a href="../Student_1/cart.html">
+            <div class="cart">
+                <i class="bi bi-cart"></i> <!--Shopping cart logo from bootsrtap-logos-->
+                <div id="cartAmount" class="cartAmount">0</div> <!--Initially the item count on the cart will be 0-->
+            </div>
+        </a>
+
+        <div class="buttons">
+            <a  href="../Student_3/profile.html" class="button">Signup</a>
+        </div>
+
+    </header>
+    <p id="top">.</p>
+    <!-- ENDING OF NAVIGATION BAR -->
+
+    <div class="heading">
+        <h2>THE GALLERY</h2>
+        <p>"The sea, once it casts its spell, holds one in its net of wonder forever."<br>- Jacques Yves Cousteau</p>
+    </div>
+
+    <div class="gallery_container">
+        <div class="gallery_body">
+            <div class="gallery_images">
+                <div>
+                    <img src="images/1.sea_turtle.jpg" alt="Sea turtle" data-description=" Sea turtle are known for their lengthy lifespans and strong shells, they are an ancient species of marine reptile. They travel great distances and are threatened by poaching and habitat destruction." onclick="openPopup(event)">
+                    <div class="image_name">Sea Turtle</div>
+                </div>
+                <div>
+                    <img src="images/2.dolphin.jpg" alt="Dolphin" data-description="Dolphins are highly intelligent marine mammals that live in social groups called pods. They are famous for their funny behaviour and unique communication skills, and friendly interactions with people. " onclick="openPopup(event)">
+                    <div class="image_name">Dolphin</div>
+                </div>
+                <div>
+                    <img src="images/3.jelly_fish.jpg" alt="Jelly fish" data-description=" A type of jellyfish that can be found in oceans all over the world. They catch food with their stinging tentacles, and some species shine in the dark because to bioluminescence." onclick="openPopup(event)">
+                    <div class="image_name">Jelly Fish</div>
+                </div>
+                <div>
+                    <img src="images/4.shark.webp" alt="Shark" data-description=" Sharks are a kind of predatory fish that have several rows of teeth and streamlined bodies. As apex predators, they are essential to the equilibrium of the food chain and play a significant role in marine ecosystems." onclick="openPopup(event)">
+                    <div class="image_name">Shark</div>
+                </div>
+                <div>
+                    <img src="images/5.stingray.jpg" alt="Stingray" data-description="Stingrays are flat-bodied fish having poisonous stings on the ends of their tails. Because of their excellent camouflage on the ocean floor, they may attack animals and hide from predators." onclick="openPopup(event)">
+                    <div class="image_name">Stingray</div>
+                </div>
+                <div>
+                    <img src="images/6.sea_horse.webp" alt="Sea horse" data-description=" Sea horses are little fish that swim erect and have curled tails. The ability to give birth to their offspring is unique to male sea horses." onclick="openPopup(event)">
+                    <div class="image_name">Sea Horse</div>
+                </div>
+                <div>
+                    <img src="images/7.anemones.jpg" alt="Anemones" data-description=" Anemones are aquatic plants with stinging tentacles used to seize food. They create symbiotic partnerships with clown fish in which they offer protection in exchange for cleaning services." onclick="openPopup(event)">
+                    <div class="image_name">Anemones</div>
+                </div>
+                <div>
+                    <img src="images/8.whale.webp" alt="Whale" data-description="Whales are large marine mammals that belong to the cetacean family which is also known for their size and complicated social interactions. They communicate by songs that are capable of great migrations and long distance travel." onclick="openPopup(event)">
+                    <div class="image_name">Whale</div>
+                </div>
+                <div>
+                    <img src="images/9.octopus.jpg" alt="Octopus" data-description="Octopuses are cephalopods known for their eight arms, and can alter their texture and colour to blend in with their surroundings. They use clever techniques for solving obstacles." onclick="openPopup(event)">
+                    <div class="image_name">Octopus</div>
+                </div>
+                <div>
+                    <img src="images/10.clownfish.jpg" alt="Clown Fish" data-description="Clown fish are tiny, highly coloured fish that lives in the sea anemone's tentacles. They serve to keep their habitats safe from predators and are resistant to the anemone's stings." onclick="openPopup(event)">
+                    <div class="image_name">Clown Fish</div>
+                </div>
+                <div>
+                    <img src="images/11.crabs.jpg" alt="Crab" data-description="Crabs are hard shelled and have claws. They are known for their capacity to grow back damaged limbs and scurry around the ocean floor." onclick="openPopup(event)">
+                    <div class="image_name">Crab</div>
+                </div>
+                <div>
+                    <img src="images/12.lionFish.jpg" alt="Lion Fish" data-description="Lionfish are venomous marine fish known for their eye-catching red and white stripes. They are native to coral reefs and hunt and defend themselves using their poisonous spines." onclick="openPopup(event)">
+                    <div class="image_name">Lion Fish</div>
+                </div>
+                <div>
+                    <img src="images/13.coral.jpg" alt="Zoanthids Soft Coral" data-description="Zoanthids are a type of soft coral often found in shallow marine environments. They come in various colors and forms." onclick="openPopup(event)">
+                    <div class="image_name">Zoanthids Soft Coral</div>
+                </div>
+                <div>
+                    <img src="images/14.coral.webp" alt="Red Sea Coral" data-description="Red Sea corals are diverse and vibrant. A wide variety of marine life uses coral reefs, which serve as a home and shelter for a wide range of aquatic creatures. They are necessary for ocean ecosystems to remain healthy and biologically diverse." onclick="openPopup(event)">
+                    <div class="image_name">Red Sea Corals</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="expand_image">
+        <span id="close_button" onclick="closePopup()"><i class="bi bi-x-square-fill"></i></span>
+
+        <img id="Expanded_img" src="images/1.sea_turtle.jpg" alt="Enlarged Image">
+
+        <div id="picture_description"></div>
+
+        <button id="previous" onclick="changeImage(-1)"><i class="bi bi-arrow-left-square-fill"></i></button>
+        <button id="next" onclick="changeImage(1)"><i class="bi bi-arrow-right-square-fill"></i></button>
+
+        <div id="additional_controls">
+            <div id="background_color">
+                <label>Background Color:</label>
+                <button class="color_button" style="background-color: rgba(149, 149, 149, 0.2);" data-color="rgba(255, 255, 255, 0.8)"></button>
+                <button class="color_button" style="background-color: rgba(255, 0, 0, 0.8);" data-color="rgba(255, 0, 0, 0.8)"></button>
+                <button class="color_button" style="background-color: rgba(0, 255, 0, 0.8);" data-color="rgba(0, 255, 0, 0.8)"></button>
+                <button class="color_button" style="background-color: rgba(0, 0, 255, 0.8);" data-color="rgba(0, 0, 255, 0.8)"></button>
+            </div>
+            <label for="font_design">Font Style:</label>
+            <select id="font_design" name="font_design">
+                <option value="Poppins">Poppins</option>
+                <option value="Arial">Arial</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Verdana">Verdana</option>
+            </select>
+            <button id="reset_button">Reset</button>
+        </div>
+        
+    </div>
+
+    <div class="top">
+        <a href="#top" class="buttons">
+            <i class="bi bi-arrow-up-circle"></i>
+        </a>
+    </div>
+    
+    
+    <section class="section_footer">
+        <div class="footer_pageEditor">
+
+            <p>Done by <a href="page_editorS4.html" target="_blank">Rishaanth Rajkumar</a></p>
+            
+        </div>
+
+        <div class="footer">
+
+            <div class="footer_content">
+                
+                <div class="footer_logo">
+                    <img class="footer_img" src="images/logo.jpg" alt="company logo">
+                    <img class="footer_title" src="images/titleFinal.png" alt="website title">
+                </div>
+                <div class="footer_icons">
+                    <h4>Social media</h4>
+                    <a href="https://www.instagram.com/unitednations/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="https://web.facebook.com/groups/greenrangersearth.org/?_rdc=1&_rdr" target="_blank"><i class='bx bxl-facebook' ></i></a>
+                    <a href="https://x.com/UN" target="b"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://www.linkedin.com/company/united-nations/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                </div>
+                
+
+            </div>
+            <div class="footer_content">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="../Student_2/home.html">Home</a></li>
+                    <li><a href="../Student_3/team.html">About US</a></li>
+                    <li><a href="../Student_2/feedback.html">Feedback</a></li>
+                    <li><a href="../Student_1/shop.html">Shop</a></li>
+                    <li><a href="../Student_1/cart.html">Cart</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="../Student_2/lifediversity.html">Life Diversity</a></li>
+                    <li><a href="../Student_1/content_S1.html">Tourism</a></li>
+                    <li><a href="../Student_3/content_S3.html">Coral Reefs</a></li>
+                    <li><a href="content_page04.html">Sustainable Practices</a></li>
+                </ul>              
+
+            </div>
+
+            <div class="footer_content">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>Tele  : +1-212-963-3209</li>
+                    <li>Email :  population@un.org</li>
+                    <li class="extra_space">director.oisc@un.org</li>
+                </ul>
+
+            </div>
+
+            <div class="footer_content">
+
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="https://www.un.org/en/about-us/terms-of-use" target="_blank">Terms and conditions</a></li>
+                    <li><a href="https://www.un.org/en/about-us/privacy-notice" target="_blank">Privacy policy</a></li>
+                </ul>
+
+            </div>
+    </div>
+    
+    <div class="rights">
+        &copy; 2024 Beneath the waves. All rights reserved.
+    </div>
+
+    </section>
+
+    <script src="gallery.js"></script>
+    <script>
+        let basket = JSON.parse(localStorage.getItem("data")) || [];
+
+        /**
+         * This function is to update the basket
+         * The function will get triggered whenever the number on the card is getting updated
+         */
+        let calculation = () => {
+            let cartIcon = document.getElementById("cartAmount");
+            cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x+y, 0);
+            // mapping all the elements to get the number of times an element gets added to the cart
+            /**
+             * mapping will hold a new array with the item count values, so we're using reduce to add them
+             * x in reduce is the first number
+             * y in reduce will be the second number
+             * if map returns [1, 2, 3, 4]
+             * on the start x is 1, y is 2
+             * and then x is 3(1+3) and y is 3. goes till everything gets added
+             */
+        }
+
+        calculation(); // Invoking the function outside so that the cart will be updated at the beginning of the program
+    </script>
+
+</body>
+</html>

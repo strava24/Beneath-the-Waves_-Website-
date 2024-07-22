@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    
+    <style>
+        header {
+            position: fixed;
+        }
+        /*////Landing page/////*/
+        .landing_page{
+        background-image: url(images/homewater.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        z-index: 1;
+        }
+
+        .landing_page::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background-color: rgba(0, 0, 0, 0.7); 
+        z-index: 2;
+        }
+
+
+        @keyframes slideInTop {
+        from {
+            transform: translateY(200px);
+        }
+
+        to {
+            transform: translateY(0px);
+        }
+        }
+
+        .container_goal {
+            display: flex;
+            justify-content: space-evenly;
+            position: relative;
+            
+            
+            padding-right: 10px;
+            z-index: 3;
+        }
+
+
+        .dev_goal {
+            
+            margin: 120px;    
+            padding: 40px;   
+            color: #00fff0;
+        }
+
+        .dev_goal h2 {
+            font-size: 40px;
+            font-weight: bold;        
+            word-wrap: break-word;
+        }
+
+        .dev_goal p {
+            font-size: 40px;    
+            font-weight: lighter;
+            
+            width: 700px;
+            word-wrap: break-word;
+        }
+
+        /* // vedio home page //*/
+        .rest_page{
+            background-color:#0f1b33 ;
+        }
+        .container_video{
+            padding-left: 50px;
+            padding: 30px;
+            background-color: #001d3d;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        
+            
+        }
+        .vedio_text{
+            margin-left: 20px;
+        }
+        
+        .vedio_text p {
+            color: #fff;            
+            word-wrap: break-word;
+      }
+        
+        /* // content home page //*/
+        .objective{
+            margin-top: -70px;
+        }
+        .container_keyObjectives {
+            display: flex;
+            justify-content: space-evenly;
+            height: 300px;
+            padding: 15px;
+            
+
+            animation-name: slideInTop;
+            animation-duration: 1.4s;
+        }
+        .container_keyObjectives a{
+            text-decoration: none;
+        }
+
+        #objectivesTopic {
+            
+            font-weight: bold;
+            font-size: 40px;
+            color: #ADE8F4;
+            text-align: center;
+            margin-top: -50px;
+            padding-bottom: 50px;
+        }
+
+        .container_keyObjectives p {
+            
+            color: aliceblue;
+            font-size: 20px;
+        }
+
+        .lifediversity, .corals, .tourism, .overFishing {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+            
+        }
+
+        .lifediversity {
+            background-image: url(images/homepage_content_lifediversity.jpg);
+        }
+
+        .tourism {
+            background-image: url(images/homepage_content_tourism.jpg);
+        }
+
+        .corals {
+            background-image: url(images/homepage_content_coral.jpg);
+        }
+
+        .overFishing {
+            background-image: url(images/homepage_content_overfishing.jpg);
+        }
+
+        .lifediversity::before, .corals::before, .tourism::before, .overFishing::before {
+            content: ''; 
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            /* Dark overlay */
+            background-color: rgba(0, 0, 0, 0.7); 
+            border-radius: 10px;
+            transition: opacity 0.3s ease;
+            z-index: 1; /* Ensure the overlay is above the background image */
+        }
+
+        .lifediversity:hover::before, .corals:hover::before, .tourism:hover::before, .overFishing:hover::before {
+            opacity: 0; /* Remove the overlay on hover */
+        }
+
+        .lifediversity h3, .corals h3, .tourism h3, .overFishing h3 {
+            position: relative;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            color: #ADE8F4;
+            text-align: center;
+            padding: 50px;
+            z-index: 2; /* Ensure the text is above the overlay */
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <script>
+    
+        document.addEventListener('scroll',()=>{
+            const header = document.querySelector("header");
+
+            if(window.scrollY >0){
+                header.classList.add("scrolled");
+
+            }else {
+                header.classList.remove("scrolled")
+            }
+        })
+    </script>
+
+    <section class="landing_page">
+        <header>
+            <div class="company-logo">
+                <img class="logo" src="images/logo.jpg" alt="logo">
+                <img src="images/titleFinal.png" alt="title" class="company-title">
+            </div>
+            
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="../Student_3/team.html">About Us</a></li>
+                    <li><a href="../Student_1/shop.html">Shop</a></li>
+                    <li><a href="../Student_4/sitemap.html">Sitemap</a></li>
+                    <li><a href="../Student_4/gallery.html">Gallery</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+    
+            </nav>
+    
+            <a href="../Student_1/cart.html">
+                <div class="cart">
+                    <i class="bi bi-cart"></i> <!--Shopping cart logo from bootsrtap-logos-->
+                    <div id="cartAmount" class="cartAmount">0</div> <!--Initially the item count on the cart will be 0-->
+                </div>
+            </a>
+    
+            <div class="buttons">
+                <a  href="../Student_3/profile.html" class="button">Signup</a>
+            </div>              
+        
+    
+        </header>
+    
+    
+    <div class="container_goal">
+
+        <div class="dev_goal">
+            <h2>Life Below Water: Preserving Our Blue Planet</h2><br><br>
+            <p>Join us in safeguarding our oceans and marine life to ensure a sustainable future for generations to come.</p><br>
+            
+         </div>
+         
+
+    </div>
+    <br><br><br><br><br>
+    </section>
+    
+    
+
+   
+    <section class="rest_page">
+        <div class="container_video">
+
+            <div class="vedio">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/u75w751uzoQ?si=nfXwmV11pvLXSHmG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+    
+            <div class="vedio_text">
+                <div class="vedio_text1">
+                    <h3 class="h3_1">
+                        <span style="font-size: 56px; color: #00fff0;">Do you know?</span> 
+                        <span style="font-size: 26px; color: #fff;">About the</span>
+                    </h3>
+                </div>
+                <h3 class="h3_2" style="font-size: 30px; color: #fff;">
+                    <span style="font-size: 60px; color: #00fff0">UN</span> 
+                    Sustainable Development Goal 
+                    <span style="color: #00fff0;">14</span>
+                </h3>
+                <p class="p2">SDG 14 aims to conserve and sustainably use the oceans, seas, and marine resources. Key targets include reducing marine pollution, protecting ecosystems, and ending overfishing. Join us in our mission to protect life below water and ensure a sustainable future.</p>
+            </div>
+    
+        </div>
+        <br><br><br><br><br><br><br>
+        <div class="objective">
+            <h2 id="objectivesTopic">Key objectives</h2>
+            
+            <div class="container_keyObjectives">
+            
+                <div class="lifediversity">
+
+                    <a href="lifediversity.html"><h3>Life diversity</h3></a>
+                    
+                </div>
+                
+                <div class="tourism"> 
+
+                    <a href="../Student_1/content_S1.html"><h3>Tourism</h3></a>
+                    
+                </div>
+
+               <div class="corals">
+                    
+                    <a href="../Student_3/content_S3.html"><h3>Protecting coral reefs</h3></a>
+
+                </div>
+
+                <div class="overFishing">
+
+                    <a href="../Student_4/content_page04.html"><h3>Sustainable fishing practises</h3></a>
+
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br>
+    </section>
+    
+    <section class="section_footer">
+        <div class="footer_pageEditor">
+
+            <p>Done by <a href="pageEditor-S2.html" target="_blank">Nipuna Rajapaksa</a></p>
+            
+        </div>
+
+        <div class="footer">
+
+            <div class="footer_content">
+                
+                <div class="footer_logo">
+                    <img class="footer_img" src="images/logo.jpg" alt="company logo">
+                    <img class="footer_title" src="images/titleFinal.png" alt="website title">
+                </div>
+                <div class="footer_icons">
+                    <h4>Social media</h4>
+                    <a href="https://www.instagram.com/unitednations/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="https://web.facebook.com/groups/greenrangersearth.org/?_rdc=1&_rdr" target="_blank"><i class='bx bxl-facebook' ></i></a>
+                    <a href="https://x.com/UN" target="b"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://www.linkedin.com/company/united-nations/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                </div>
+                
+
+            </div>
+            <div class="footer_content">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="../Student_3/team.html">About US</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="../Student_1/shop.html">Shop</a></li>
+                    <li><a href="../Student_1/cart.html">Cart</a></li>
+                    <li><a href="../Student_4/sitemap.html">Sitemap</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="lifediversity.html">Life Diversity</a></li>
+                    <li><a href="../Student_1/content_S1.html">Tourism</a></li>
+                    <li><a href="../Student_3/content_S3.html">Coral Reefs</a></li>
+                    <li><a href="../Student_4/content_page04.html">Sustainable Practices</a></li>
+                </ul>              
+
+            </div>
+
+            <div class="footer_content">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>Tele  : +1-212-963-3209</li>
+                    <li>Email :  population@un.org</li>
+                    <li class="extra_space">director.oisc@un.org</li>
+                </ul>
+
+            </div>
+
+            <div class="footer_content">
+
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="https://www.un.org/en/about-us/terms-of-use" target="_blank">Terms and conditions</a></li>
+                    <li><a href="https://www.un.org/en/about-us/privacy-notice" target="_blank">Privacy policy</a></li>
+                </ul>
+
+            </div>
+    </div>
+    
+    <div class="rights">
+        &copy; 2024 Beneath the waves. All rights reserved.
+    </div>
+
+    </section>
+
+
+    <script>
+        let basket = JSON.parse(localStorage.getItem("data")) || [];
+
+        /**
+         * This function is to update the basket
+         * The function will get triggered whenever the number on the card is getting updated
+         */
+        let calculation = () => {
+            let cartIcon = document.getElementById("cartAmount");
+            cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x+y, 0);
+            // mapping all the elements to get the number of times an element gets added to the cart
+            /**
+             * mapping will hold a new array with the item count values, so we're using reduce to add them
+             * x in reduce is the first number
+             * y in reduce will be the second number
+             * if map returns [1, 2, 3, 4]
+             * on the start x is 1, y is 2
+             * and then x is 3(1+3) and y is 3. goes till everything gets added
+             */
+        }
+
+        calculation(); // Invoking the function outside so that the cart will be updated at the beginning of the program
+    </script>
+
+    
+
+   
+
+</body>

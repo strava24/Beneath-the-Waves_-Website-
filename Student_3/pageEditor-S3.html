@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student 3 - Editor's page</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #081b29; /* Deep blue background */
+            color: #f0f8ff; /* Light blue text */
+        }
+        
+        header {
+            background-color: #0074D9; /* Brighter blue for header */
+            color: #f0f8ff;
+            text-align: center;
+            padding: 20px 0;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        
+        .MGprofile {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #004080; /* Dark blue background for profile */
+            margin: 50px 400px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+            animation-delay: 0.5s;
+            animation-fill-mode: both;
+        }
+
+        .MGprofile h2 {
+            font-size: 40px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .MGprofile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 5px;
+        }
+        
+        .bio {
+            font-size: 20px;
+            margin: 3px 0px;
+            color: #f0f8ff; /* Light blue text */
+        }
+        
+        .pages {
+            padding: 32px;
+            background-color: #004080; /*Dark blue background for pages*/
+            margin: 16px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+            animation-delay: 1s;
+            animation-fill-mode: both;
+        }
+        
+        .page {
+            margin-bottom: 24px;
+            animation: fadeInUp 1s ease-in-out;
+            animation-delay: 1.5s;
+            animation-fill-mode: both;
+        }
+        
+        .page h3 {
+            margin-bottom: 8px;
+            color: #7FDBFF; /*Light blue for page titles*/
+        }
+        
+        .page .description {
+            color: #ffffff; /*white for descriptions*/
+            font-size: 18px;
+        }
+
+        .page .page-link {
+            color: #ffffff; /*white for page links*/
+            font-size: 15px;
+        }
+        
+        @media (min-width: 768px) {
+            .profile, .pages {
+                max-width: 800px;
+                margin: 32px auto;
+            }
+        }
+
+        /* Keyframes for fadeInUp animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Editor's Page</h1>
+    </header>
+    <section class="MGprofile">
+        <img src="images/member3.jpg" alt="MG's Photo" class="MGprofile-photo">
+        <h2>Sasanka De Zoysa</h2>
+        <p class="bio">Hi I'm MG Sasanka, a computer science undergraduate at IIT. I'm creative in nature and I love working on the front-end with HTML, CSS.
+            <br>Also, on the back-end with some JavaScript even though I'm just a beginner!</p>
+    </section>
+    <section class="pages">
+        <h2>Pages that I worked on....</h2>
+        <div class="page">
+            <h3>1. Profile page</h3>
+            <a href="profile.html" class="page-link">Click to visit the profile page....</a>
+            <p class="description">Implemented this page utilizing mainly JavaScript, HTML and finally some CSS for a clean design.<br>
+                Users are able to create a new profile on this page entering their personal details.</p>
+        </div>
+        <div class="page">
+            <h3>2. Team page</h3>
+            <a href="team.html" class="page-link">Click to visit the team page....</a>
+            <p class="description">The team page contains information of our team and tasks carried out by each one of us.<br>
+                Designed with HTML and CSS.</p>
+        </div>
+        <div class="page">
+            <h3>3. Content page</h3>
+            <a href="content_S3.html" class="page-link">Protecting coral reefs.</a>
+            <p class="description">A comprehensive guide on how to protect coral reefs. Implemented mainly utilizing HTML, CSS <br>
+                and a little bit of JavaScript, making it interactive.</p>
+        </div>
+    </section>
+</body>
+</html>

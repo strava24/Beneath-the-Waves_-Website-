@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    
+    <title>Protecting Coral Reefs: A Comprehensive Guide</title>
+
+    <style>
+        body {
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background: url('images/gradient_BG.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        .maincontainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px; 
+            width: 100%; 
+            max-width: 1200px; /* Set a max-width for better control */
+            margin: 0 auto;
+        }
+        .coral-protection {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px; 
+            border-radius: 10px;
+            max-width: 1600px; 
+            width: 100%;
+        }
+        .maincontainer h1 {
+            color: #006699;
+            font-size: 35px; 
+        }
+        .maincontainer h2 {
+            color: #006699;
+            font-size: 30px; 
+        }
+        .maincontainer h3 {
+            color: #006699;
+            font-size: 26px; 
+        }
+        .maincontainer p {
+            font-size: 18px; 
+        }
+        .maincontainer ul {
+            list-style-type: disc;
+            margin: 20px 0;
+            padding-left: 20px;
+            font-size: 18px; 
+        }
+        .image-container {
+            display: block;
+            margin: 20px 0;
+            cursor: pointer;
+            float: left;
+            margin-right: 20px;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .popup-image {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            max-width: 90%;
+            max-height: 90%;
+            display: none;
+        }
+        .popup-image img {
+            width: 100%;
+            height: auto;
+        }
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 9998;
+            display: none;
+        }
+        .clear {
+            clear: both;
+        }
+        /* Specific image containers for individual resizing */
+        .biodiversity-img-container {
+            width: 300px; 
+        }
+        .threats-img-container {
+            width: 300px; 
+        }
+        .tourism-img-container {
+            width: 300px; 
+        }
+        .custom-link-color a {
+            color: #001d3d; 
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.addEventListener('scroll',()=>{
+            const header = document.querySelector("header");
+
+            if(window.scrollY >0){
+                header.classList.add("scrolled");
+
+            }else {
+                header.classList.remove("scrolled")
+            }
+        })
+    </script>
+    <header>
+        <div class="company-logo">
+            <img class="logo" src="images/logo.jpg" alt="logo">
+            <img src="images/titleFinal.png" alt="title" class="company-title">
+        </div>
+        
+        <nav>
+            <ul class="nav_links">
+                <li><a href="../Student_2/home.html">Home</a></li>
+                <li><a href="team.html">About Us</a></li>
+                <li><a href="../Student_1/shop.html">Shop</a></li>
+                <li><a href="../Student_4/sitemap.html">Sitemap</a></li>
+                <li><a href="../Student_4/gallery.html">Gallery</a></li>
+                <li><a href="../Student_2/feedback.html">Feedback</a></li>
+            </ul>
+
+        </nav>
+        <a href="cart.html">
+            <div class="cart">
+                <i class="bi bi-cart"></i> <!--Shopping cart logo from bootsrtap-logos-->
+                <div id="cartAmount" class="cartAmount">0</div> <!--Initially the item count on the cart will be 0-->
+            </div>
+        </a>
+        <div class="buttons">
+            <a  href="profile.html"><button>Signup</button></a>
+        </div>
+    </header>
+
+    <div class="maincontainer">
+        <div class="coral-protection">
+            <h1>Protecting coral reefs: A comprehensive guide</h1>
+            <p>Coral reefs are vital to marine ecosystems, supporting about 25% of all marine life. They provide food, income, and coastal protection to millions of people. However, 
+                they are highly sensitive to environmental changes and human activities, necessitating immediate and sustained conservation efforts.</p><br>
+
+            <h2>Why coral reefs matter???</h2>
+            <div class="image-container biodiversity-img-container">
+                <img src="images/coral-biodiversity.jpg" alt="Coral Reef Biodiversity" onclick="openPopup(this)">
+            </div>
+            <ul>
+                <li><strong>Biodiversity:</strong> Coral reefs are among the most diverse ecosystems, comparable to rainforests.</li>
+                <li><strong>Economic benefits:</strong> They support fisheries and tourism, providing livelihoods to millions.</li>
+                <li><strong>Coastal protection:</strong> Reefs act as natural barriers, reducing the impact of waves and preventing erosion.</li>
+            </ul>
+            <div class="clear"></div>
+
+            <h2>Threats to coral reefs</h2>
+            <div class="image-container threats-img-container">
+                <img src="images/threats-to-reefs.jpg" alt="Threats to Coral Reefs" onclick="openPopup(this)">
+            </div>
+            <ul>
+                <li><strong>Climate change:</strong> Rising sea temperatures cause coral bleaching, threatening reef survival.</li>
+                <li><strong>Pollution:</strong> Runoff from agriculture and waste dumping deteriorates water quality.</li>
+                <li><strong>Overfishing:</strong> Unsustainable fishing practices disrupt the ecological balance.</li>
+                <li><strong>Tourism:</strong> Poorly managed tourism can physically damage coral reefs.</li>
+            </ul>
+            <div class="clear"></div>
+
+            <h2>Effective protection strategies</h2>
+            <h3>Sustainable tourism</h3>
+            <div class="image-container tourism-img-container">
+                <img src="images/sustainable-tourism.jpg" alt="Sustainable Tourism" onclick="openPopup(this)">
+            </div>
+            <ul>
+                <li><strong>Responsible practices:</strong> Tourists should avoid touching corals, use reef-safe sunscreen, and follow local guidelines.</li>
+                <li><strong>Eco-friendly infrastructure:</strong> Developing tourism facilities that minimize environmental impact.</li>
+            </ul>
+            <div class="clear"></div>
+
+            <h3>Climate action</h3>
+            <ul>
+                <li><strong>Global initiatives:</strong> International efforts to reduce carbon emissions are critical.</li>
+                <li><strong>Local measures:</strong> Coastal communities can adopt renewable energy sources to minimize their carbon footprint.</li>
+            </ul>
+
+            <h3>Pollution control</h3>
+            <ul>
+                <li><strong>Waste management:</strong> Proper disposal of waste and reducing plastic usage are essential.</li>
+                <li><strong>Agricultural practices:</strong> Using fewer fertilizers and pesticides to prevent runoff.</li>
+            </ul>
+
+            <h3>Fisheries management</h3>
+            <ul>
+                <li><strong>Regulations:</strong> Enforcing sustainable fishing limits and protecting breeding grounds.</li>
+                <li><strong>Community involvement:</strong> Empowering local communities to manage their resources.</li>
+            </ul>
+
+            <h3>Restoration efforts</h3>
+            <ul>
+                <li><strong>Reef rehabilitation:</strong> Techniques like coral gardening and artificial reefs can help restore damaged areas.</li>
+                <li><strong>Research and monitoring:</strong> Ongoing scientific research and monitoring are vital for adaptive management strategies.</li>
+                <li><strong>Collaborative projects:</strong> International and local collaborations can share knowledge and resources for effective restoration.</li>
+            </ul>
+
+            <h2>What you can do???</h2>
+            <ul>
+                <li><strong>Support conservation organizations:</strong> Donations and volunteering can make a significant impact.</li>
+                <li><strong>Educate and advocate:</strong> Raising awareness and advocating for policies that protect coral reefs.</li>
+            </ul>
+
+            <h2>Conclusion</h2>
+            <p>Protecting coral reefs requires a multifaceted approach involving global cooperation, local actions, and individual responsibility. 
+                By adopting sustainable practices and supporting conservation efforts, we can ensure the survival of these vital ecosystems for future generations.</p><br>
+
+            <p class="custom-link-color">For more detailed information, you can explore the original articles 
+                from <a href="https://www.epa.gov/coral-reefs/what-you-can-do-help-protect-coral-reefs#:~:text=Practice%20safe%20and%20responsible%20diving,friendly%20approach%20to%20sun%20protection." target="_blank">EPA</a>, 
+                <a href="https://www.unep.org/explore-topics/oceans-seas/what-we-do/protecting-coral-reefs" target="_blank">UNEP</a>, 
+                and the <a href="https://thecommonwealth.org/bluecharter/coral-reef-protection-and-restoration" target="_blank">Commonwealth</a>.</p>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="popupOverlay" onclick="closePopup()"></div>
+    <div class="popup-image" id="popupImage">
+        <img src="" alt="Popup Image">
+    </div>
+
+    <script>
+        function openPopup(img) {
+            var popupImage = document.getElementById('popupImage').getElementsByTagName('img')[0];
+            popupImage.src = img.src;
+            document.getElementById('popupOverlay').style.display = 'block';
+            document.getElementById('popupImage').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popupOverlay').style.display = 'none';
+            document.getElementById('popupImage').style.display = 'none';
+        }
+    </script>
+
+    <section class="section_footer">
+        <div class="footer_pageEditor">
+            <p>Done by <a href="pageEditor-S3.html" target="_blank">Sasanka De Zoysa</a></p>
+        </div>
+        
+    
+        <div class="footer">
+            <div class="footer_content">
+                <div class="footer_logo">
+                    <img class="footer_img" src="images/logo.jpg" alt="company logo">
+                    <img class="footer_title" src="images/titleFinal.png" alt="website title">
+                </div>
+                <div class="footer_icons">
+                    <h4>Social media</h4>
+                    <a href="https://www.instagram.com/unitednations/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="https://web.facebook.com/groups/greenrangersearth.org/?_rdc=1&_rdr" target="_blank"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://x.com/UN" target="_blank"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.linkedin.com/company/united-nations/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+            <div class="footer_content">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="../Student_2/home.html">Home</a></li>
+                    <li><a href="team.html">About US</a></li>
+                    <li><a href="../Student_2/feedback.html">Feedback</a></li>
+                    <li><a href="../Student_1/shop.html">Shop</a></li>
+                    <li><a href="../Student_1/cart.html">Cart</a></li>
+                    <li><a href="../Student_4/sitemap.html">Sitemap</a></li>
+                    <li><a href="../Student_4/gallery.html">Gallery</a></li>                    
+                    <li><a href="../Student_2/lifediversity.html">Life Diversity</a></li>
+                    <li><a href="../Student_1/content_S1.html">Tourism</a></li>
+                    <li><a href="content_S3.html">Coral Reefs</a></li>
+                    <li><a href="../Student_4/content_page04.html">Sustainable Practices</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer_content">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>Tele  : +1-212-963-3209</li>
+                    <li>Email : population@un.org</li>
+                    <li class="extra_space">director.oisc@un.org</li>
+                </ul>
+            </div>
+    
+            <div class="footer_content">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="https://www.un.org/en/about-us/terms-of-use" target="_blank">Terms and conditions</a></li>
+                    <li><a href="https://www.un.org/en/about-us/privacy-notice" target="_blank">Privacy policy</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="rights">
+            &copy; 2024 Beneath the waves. All rights reserved.
+        </div>
+    </section>
+
+    <script>
+        let basket = JSON.parse(localStorage.getItem("data")) || [];
+
+        /**
+         * This function is to update the basket
+         * The function will get triggered whenever the number on the card is getting updated
+         */
+        let calculation = () => {
+            let cartIcon = document.getElementById("cartAmount");
+            cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x+y, 0);
+            // mapping all the elements to get the number of times an element gets added to the cart
+            /**
+             * mapping will hold a new array with the item count values, so we're using reduce to add them
+             * x in reduce is the first number
+             * y in reduce will be the second number
+             * if map returns [1, 2, 3, 4]
+             * on the start x is 1, y is 2
+             * and then x is 3(1+3) and y is 3. goes till everything gets added
+             */
+        }
+
+        calculation(); // Invoking the function outside so that the cart will be updated at the beginning of the program
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    background-image: url(images/background1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+header.scroll {
+    background-color:#001d3d7d;
+    opacity: 0.9;
+}
+
+.heading {
+    text-align: center;
+    padding-bottom: 0px;
+    font-size: 125px;
+    margin: 50px;
+    margin-bottom: 2%;
+    color: aquamarine;
+}
+
+.container_sitemap {
+    padding: 50px 0px 60px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+.sitemap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+    border-radius: 25px ;
+}
+
+.top{
+    justify-content: center;
+    display: flex;
+    padding-bottom: 5px;
+}
+
+circle, rect{
+    fill: white;
+    stroke: darkblue;
+    stroke-width: 3; 
+}
+
+line {
+    stroke:black;
+    stroke-width: 3px;
+}
+
+text{
+    fill:black;
+    font-family: "Poppins";
+    font-size: 1.1vw;
+}
+
+circle:hover, rect:hover {
+    fill:gold;
+    stroke-width: 6px;
+}
+
+circle:active, rect:active {
+    fill:goldenrod;
+}
+
+circle:visited, rect:visited {
+    fill:gray;
+}
+
+@media (max-width: 600px) {
+    .heading {
+        font-size: 15vw;
+    }
+
+    text {
+        font-size: 2vw;
+    }
+}

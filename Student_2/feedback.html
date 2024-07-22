@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <style>
+        body {
+            background: url("images/StockCake-Ocean's Dynamic Beauty_1718434291.jpg") center center / cover no-repeat;
+            filter: blur(10px) brightness(2px);
+            background-size: cover;
+        }
+        .header {
+            background-color: #023E8A;
+        }
+        .feedback * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            color: #fff;
+        }
+        .feedback {
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+        .feedback .container {
+            width: 700px;
+            background: rgb(23, 22, 22);
+            box-shadow: 0 0 8px rgba(250, 250, 250, 0.6);
+            opacity: 0.87;
+        }
+        .feedback .container form {
+            width: 100%;
+            text-align: center;
+            padding: 25px 20px;
+        }
+        .feedback h1, .feedback h3 {
+            text-align: center;
+        }
+        .feedback form h1 {
+            text-align: center;
+            padding: 10px 0;
+        }
+        .feedback form .Input_control {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .feedback form input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .feedback form input {
+            width: 100%;
+            height: 50px;
+            margin: 4px 0;
+            border: 1px solid #5c5c5c;
+            border-radius: 3px;
+            background: #181717;
+            padding: 0 15px;
+            padding-right: 45px;
+            font-size: 20px;
+        }
+        .feedback form textarea {
+            padding: 5px 15px;
+            border: 1px solid #5c5c5c;
+            border-radius: 3px;
+            background: #181717;
+            font-size: 20px;
+            width: 100%;
+            margin: 4px 0;
+        }
+        .feedback form button {
+            margin-top: 5px;
+            border: none;
+            background: #00fff0;
+            color: #222;
+            padding: 10px 10px;
+            font-size: 15px;
+            font-weight: 800;
+            cursor: pointer;
+            border-radius: 3px;
+            opacity: 1;
+            transition: transform 0.3s;
+        }
+        .feedback form button:hover {
+            transform: translateY(-10px);
+            background-color: #023E8A;
+            color: lightblue;
+        }
+        .feedback form #fbtn1 {
+            margin-right: 10px;
+        }
+        .feedback form input:focus, .feedback form textarea:focus {
+            border: 1px solid #00fff0;
+            color: #00fff0;
+            transition: all 0.3s ease;
+        }
+        .Input_control.success input, .Input_control.success textarea {
+            border-color: green;
+        }
+        .Input_control.error input, .Input_control.error textarea {
+            border-color: red;
+        }
+        .Input_control .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .preview {
+            display: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .preview h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .preview p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .preview strong {
+            color: #00fff0;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+    
+        document.addEventListener('scroll',()=>{
+            const header = document.querySelector("header");
+
+            if(window.scrollY >0){
+                header.classList.add("scrolled");
+
+            }else {
+                header.classList.remove("scrolled")
+            }
+        })
+
+        
+
+    </script>
+
+    
+        <header>
+            <div class="company-logo">
+                <img class="logo" src="images/logo.jpg" alt="logo">
+                <img src="images/titleFinal.png" alt="title" class="company-title">
+            </div>
+            
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="../Student_3/team.html">About Us</a></li>
+                    <li><a href="../Student_1/shop.html">Shop</a></li>
+                    <li><a href="../Student_4/sitemap.html">Sitemap</a></li>
+                    <li><a href="../Student_4/gallery.html">Gallery</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+    
+            </nav>
+    
+            <a href="../Student_1/cart.html">
+                <div class="cart">
+                    <i class="bi bi-cart"></i> <!--Shopping cart logo from bootsrtap-logos-->
+                    <div id="cartAmount" class="cartAmount">0</div> <!--Initially the item count on the cart will be 0-->
+                </div>
+            </a>
+    
+            <div class="buttons">
+                <a  href="../Student_3/profile.html" class="button">Signup</a>
+            </div>              
+        
+    
+        </header>
+    <section class="feedback">
+        <div class="container">
+            <div class="topic">
+                <h1>FeedBack form</h1>
+                <h3>*Required fields</h3>
+            </div>     
+            <form id="form" action="mailto:someone@example.com" method="post" enctype="text/plain">
+                <div class="Input_control">
+                    <label >*Name</label>
+                    <input type="text" id="username" name="name" placeholder="Enter your full name">
+                    <div class="error"></div>
+                </div>
+                <div class="Input_control">
+                    <label >*Email address</label>
+                    <input type="text" id="email" name="email" placeholder="Enter your email address (admin@mail.com)" autofocus>
+                    <div class="error"></div>
+                </div>
+                <div class="Input_control"> 
+                    <p>Was this your first time visiting our website</p>
+                    <label >Yes</label>
+                    <input type="radio"  name="radio1" value="yes" checked>
+                    <label >No</label>
+                    <input type="radio"  name="radio1" value="no" >
+                </div>
+                <div class="Input_control">
+                    <p>Would you recommend our services</p>
+                    <label >Yes</label>
+                    <input type="radio" name="radio2" value="yes" checked>
+                    <label >No</label>
+                    <input type="radio" name="radio2" value="no" >
+                </div>
+                <div class="Input_control">
+                    <p>How are you satisfied with our services? Choose from 0 - 100</p>
+                    <label >1</label>
+                    <input type="radio" name="radio3" value="1" checked>
+                    <label >2</label>
+                    <input type="radio" name="radio3" value="2" >
+                    <label >3</label>
+                    <input type="radio" name="radio3" value="3" >
+                    <label >4</label>
+                    <input type="radio" name="radio3" value="4" >
+                    <label >5</label>
+                    <input type="radio" name="radio3" value="5" >
+                </div>
+                <textarea cols="15" rows="5" placeholder="Enter your suggestions here"></textarea>
+                
+                
+                <input type="hidden" name="name" id="hiddenName">
+                <input type="hidden" name="email" id="hiddenEmail">
+                <input type="hidden" name="firstTime" id="hiddenFirstTime">
+                <input type="hidden" name="recommend" id="hiddenRecommend">
+                <input type="hidden" name="satisfaction" id="hiddenSatisfaction">
+                <input type="hidden" name="suggestions" id="hiddenSuggestions">
+
+                <button type="submit" id="fbtn1" name="button1">Submit</button>                
+                <button id="fbtn2" name="button2">Preview</button>
+            </form>
+            <div class="preview">
+                <h2>Preview of your feedback:</h2>
+                <p><strong>Name:</strong> <span id="previewName"></span></p>
+                <p><strong>Email:</strong> <span id="previewEmail"></span></p>
+                <p><strong>First Time Visit:</strong> <span id="previewFirstTime"></span></p>
+                <p><strong>Recommend:</strong> <span id="previewRecommend"></span></p>
+                <p><strong>Satisfaction:</strong> <span id="previewSatisfaction"></span></p>
+                <p><strong>Suggestions:</strong> <span id="previewSuggestions"></span></p>
+            </div>
+        </div>
+    </section>
+    <section class="section_footer">
+        <div class="footer_pageEditor">
+
+            <p>Done by <a href="pageEditor-S2.html" target="_blank">Nipuna Rajapaksa</a></p>
+            
+        </div>
+
+        <div class="footer">
+
+            <div class="footer_content">
+                
+                <div class="footer_logo">
+                    <img class="footer_img" src="images/logo.jpg" alt="company logo">
+                    <img class="footer_title" src="images/titleFinal.png" alt="website title">
+                </div>
+                <div class="footer_icons">
+                    <h4>Social media</h4>
+                    <a href="https://www.instagram.com/unitednations/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="https://web.facebook.com/groups/greenrangersearth.org/?_rdc=1&_rdr" target="_blank"><i class='bx bxl-facebook' ></i></a>
+                    <a href="https://x.com/UN" target="b"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://www.linkedin.com/company/united-nations/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                </div>
+                
+
+            </div>
+            <div class="footer_content">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="../Student_3/team.html">About US</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="../Student_1/shop.html">Shop</a></li>
+                    <li><a href="../Student_1/cart.html">Cart</a></li>
+                    <li><a href="../Student_4/sitemap.html">Sitemap</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="lifediversity.html">Life Diversity</a></li>
+                    <li><a href="../Student_1/content_S1.html">Tourism</a></li>
+                    <li><a href="../Student_3/content_S3.html">Coral Reefs</a></li>
+                    <li><a href="../Student_4/content_page04.html">Sustainable Practices</a></li>
+
+                </ul>              
+
+            </div>
+
+            <div class="footer_content">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>Tele  : +1-212-963-3209</li>
+                    <li>Email :  population@un.org</li>
+                    <li class="extra_space">director.oisc@un.org</li>
+                </ul>
+
+            </div>
+
+            <div class="footer_content">
+
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="https://www.un.org/en/about-us/terms-of-use" target="_blank">Terms and conditions</a></li>
+                    <li><a href="https://www.un.org/en/about-us/privacy-notice" target="_blank">Privacy policy</a></li>
+                </ul>
+
+            </div>
+    </div>
+    
+    <div class="rights">
+        &copy; 2024 Beneath the waves. All rights reserved.
+    </div>
+
+    </section>
+    
+    <script>
+
+    let basket = JSON.parse(localStorage.getItem("data")) || [];
+
+    /**
+     * This function is to update the basket
+     * The function will get triggered whenever the number on the card is getting updated
+     */
+    let calculation = () => {
+        let cartIcon = document.getElementById("cartAmount");
+        cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x+y, 0);
+        // mapping all the elements to get the number of times an element gets added to the cart
+        /**
+         * mapping will hold a new array with the item count values, so we're using reduce to add them
+         * x in reduce is the first number
+         * y in reduce will be the second number
+         * if map returns [1, 2, 3, 4]
+         * on the start x is 1, y is 2
+         * and then x is 3(1+3) and y is 3. goes till everything gets added
+         */
+    }
+
+    calculation(); // Invoking the function outside so that the cart will be updated at the beginning of the program
+
+
+    
+    // Element to get user input using the ID
+    const form = document.getElementById('form');
+    const username = document.getElementById('username');
+    const email = document.getElementById('email');
+    const radioFirstTime = document.getElementsByName('radio1');
+    const radioRecommend = document.getElementsByName('radio2');
+    const radioSatisfaction = document.getElementsByName('radio3');
+    const suggestions = document.querySelector('textarea');
+    const previewButton = document.getElementById('fbtn2');
+
+    // Elements to display preview
+    const previewSection = document.querySelector('.preview');
+    const previewName = document.getElementById('previewName');
+    const previewEmail = document.getElementById('previewEmail');
+    const previewFirstTime = document.getElementById('previewFirstTime');
+    const previewRecommend = document.getElementById('previewRecommend');
+    const previewSatisfaction = document.getElementById('previewSatisfaction');
+    const previewSuggestions = document.getElementById('previewSuggestions');
+
+    // Hidden input elements for email
+    const hiddenName = document.getElementById('hiddenName');
+    const hiddenEmail = document.getElementById('hiddenEmail');
+    const hiddenFirstTime = document.getElementById('hiddenFirstTime');
+    const hiddenRecommend = document.getElementById('hiddenRecommend');
+    const hiddenSatisfaction = document.getElementById('hiddenSatisfaction');
+    const hiddenSuggestions = document.getElementById('hiddenSuggestions');
+    
+    // Event listener for form submission
+    form.addEventListener('submit', (e) => {
+    let messages = [];
+    const usernameParent = username.parentElement;
+    const emailParent = email.parentElement;
+
+    // Clear previous error messages
+    usernameParent.querySelector('.error').innerText = '';
+    emailParent.querySelector('.error').innerText = '';
+    
+    //Validate Username
+    if (username.value === '' || username.value === null) {
+        messages.push("Name is required");
+        usernameParent.querySelector('.error').innerText = "Name is required";
+        usernameParent.classList.add('error');
+        usernameParent.classList.remove('success');
+    } else if (/\d/.test(username.value)) {
+        messages.push("Name cannot contain numbers");
+        usernameParent.querySelector('.error').innerText = "Name cannot contain numbers";
+        usernameParent.classList.add('error');
+        usernameParent.classList.remove('success');
+    } else {
+        usernameParent.classList.add('success');
+        usernameParent.classList.remove('error');
+    }
+    
+    //Validate email
+    if (email.value === '' || email.value === null) {
+        messages.push("Email is required");
+        emailParent.querySelector('.error').innerText = "Email is required";
+        emailParent.classList.add('error');
+        emailParent.classList.remove('success');
+    } else {
+        emailParent.classList.add('success');
+        emailParent.classList.remove('error');
+    }
+
+    //If there are validation errors , prevent from submission
+    if (messages.length > 0) {
+        e.preventDefault();
+    } else {
+        // Collect values
+        hiddenName.value = username.value;
+        hiddenEmail.value = email.value;
+        
+        // Capture radio values
+        hiddenFirstTime.value = '';
+        for (let radio of radioFirstTime) {
+            if (radio.checked) {
+                hiddenFirstTime.value = radio.value;
+                break;
+            }
+        }
+        
+        hiddenRecommend.value = '';
+        for (let radio of radioRecommend) {
+            if (radio.checked) {
+                hiddenRecommend.value = radio.value;
+                break;
+            }
+        }
+
+        hiddenSatisfaction.value = '';
+        for (let radio of radioSatisfaction) {
+            if (radio.checked) {
+                hiddenSatisfaction.value = radio.value;
+                break;
+            }
+        }
+        
+        hiddenSuggestions.value = suggestions.value;
+
+        // Display preview
+        previewName.innerText = hiddenName.value;
+        previewEmail.innerText = hiddenEmail.value;
+        previewFirstTime.innerText = hiddenFirstTime.value;
+        previewRecommend.innerText = hiddenRecommend.value;
+        previewSatisfaction.innerText = hiddenSatisfaction.value;
+        previewSuggestions.innerText = hiddenSuggestions.value;
+
+        previewSection.style.display = 'block';
+    }
+    });
+    
+    //Event listner for preveiw button clicks
+    previewButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        previewSection.style.display = 'block';
+        previewName.innerText = username.value;
+        previewEmail.innerText = email.value;
+
+        // Display radio values
+        previewFirstTime.innerText = '';
+        for (let radio of radioFirstTime) {
+            if (radio.checked) {
+                previewFirstTime.innerText = radio.value;
+                break;
+            }
+        }
+
+        previewRecommend.innerText = '';
+        for (let radio of radioRecommend) {
+            if (radio.checked) {
+                previewRecommend.innerText = radio.value;
+                break;
+            }
+        }
+
+        previewSatisfaction.innerText = '';
+        for (let radio of radioSatisfaction) {
+            if (radio.checked) {
+                previewSatisfaction.innerText = radio.value;
+                break;
+            }
+        }
+
+        previewSuggestions.innerText = suggestions.value;
+    });
+
+    </script>
+        
+</body>
+</html>

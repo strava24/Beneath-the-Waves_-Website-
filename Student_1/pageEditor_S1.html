@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor - S1</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            background-color: #081b29;
+            color: #ededed;
+        }
+
+        .main-container {
+            width: 1500px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .self-intro {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            border: 3px solid #00abf0;
+            border-radius: 10px;
+        }
+
+        .self-intro-content{
+            max-width: 800px;
+        }
+
+        h2 {
+            font-weight: 700;
+            color: #00abf0;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 20px 0 40px;
+        }
+
+        .self-intro .buttons button {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        } 
+
+        .self-intro .image {
+            display: block;
+            width: 600px;
+
+        }
+
+        .self-intro .image img{
+            width: 300px;
+            border-radius: 25%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 3px solid #00abf0;
+            padding: 5px;
+            transition: 1.5s;
+        }
+
+        .self-intro .image img:hover {
+            background-color: #00abf0;
+            opacity: 0.8;
+        }
+
+        .social-media {
+            position: absolute;
+            bottom: 150px;
+            width: 170px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .social-media a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            font-size: 20px;
+            color: #ededed;
+            text-decoration: none;
+        }
+
+        .social-media a:hover {
+            transform: scale(1.2);
+        }
+
+        .website-related {
+            margin-top: 75px;
+            text-align: center;
+            align-items: center;
+            padding: 0 10%;
+            color: #ededed
+        }
+
+        .website-related h2 span{
+            color: #ededed;
+        }
+
+        .content-title {
+            color: #00abf0;
+        }
+
+        .content-01 {
+            border: 3px solid #081b29;
+            padding: 2% 5%;
+            border-radius: 10px;
+            margin: 5px 0;
+            width: 95%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .content-02, .content-03 {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 5px;
+        }
+
+        .content-02-details, .content-03-details {
+            width: 45%;
+            padding: 2% 5%;
+            border: 3px solid #081b29;
+            border-radius: 10px;
+        }
+
+        .content-01:hover, .content-02-details:hover, .content-03-details:hover {
+            border: 3px solid #00abf0;
+        }
+
+        #top-button, #top {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .buttons {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        #top {
+            text-decoration: none;
+        }
+
+        a.pages {
+            color: #00abf0; 
+            text-decoration: underline;
+            cursor: pointer; 
+            font-style: italic;
+        }
+
+        .pages:hover {
+            text-decoration: none; /* Remove underline on hover */ 
+            opacity: 0.5;
+        }
+
+        #email-btn {
+            background-color: #ADE8F4;
+            border: none;
+            border-radius: 10px;
+            color: #001d3d;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+            padding: 5px 10px 5px 10px;
+            transition-property: transform;
+            transition-duration: 0.3s;
+        }
+
+        #email-btn:hover {
+            transform: translateY(-6px);
+            background-color: #023E8A;
+            color: lightblue;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="buttons" id="top">
+        <a href="#editor" class="button">To Page Editor</a>
+    </div>
+
+    <div class="main-container">
+        <section class="self-intro">
+            <div class="self-intro-content">
+                <h2>Hello World!</h2>
+                <h1>I'm Robosriyas Stravakske Fernando</h1>
+                <p>
+                    As a Computer Science undergraduate student, 
+                    I am proficient in programming languages such as Java, Python, and JavaScript. 
+                    I am a tech enthusiast who actively attends tech events and connects with people in the industry. 
+                    My goal is to become a Software Engineer, leveraging my skills and passion for technology to contribute effectively in the field.
+                </p>
+                <button  onclick="location.href='mailto:stravanskefernando24@gmail.com';" id="email-btn">Email Me</button>
+            </div>
+    
+            <div class="image">
+                <img src="images/student1.jpg" alt="Image of Student 1">
+            </div>
+    
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/strava/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.instagram.com/strxvaa.__/" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://web.facebook.com/stravanske.fernando" target="_blank"><i class="bi bi-facebook"></i></a>
+            </div>
+        </section>
+    </div>
+
+    <section class="website-related">
+        <div>
+            <h2 id="editor">
+                Role : <span> Student 01</span> <br>
+                IIT Number : <span>20232931</span> <br>
+                UOW Number : <span>w2082277</span> <br>
+                Group : <span>N</span> <br>
+                <span>The following pages</span> were edited by me <br>
+            </h2>
+        </div>
+
+        <div class="webiste-related-content">
+            <div class="content-01">
+                <h3 class="content-title">Shop</h3>
+                <p>
+                    Developed a shop utilizing HTML, CSS, and JavaScript. <br>
+                    <b>There are 03 main components on the shop : </b> <br>
+                    <i>&nbsp;&nbsp;&nbsp;Shop          - </i> The page where products are displayed to the user, allowing them to select items. <br>
+                    <i>&nbsp;&nbsp;&nbsp;Cart          - </i> The page where all selected products are displayed for the user to review and proceed to checkout. <br>
+                    <i>&nbsp;&nbsp;&nbsp;Checkout Page - </i> The page where the user can make the payment and complete the order. <br>
+                    Twelve unique products that match the theme were added to the shop.<br><br>
+                    To shop : 
+                    <a href="shop.html" target="_blank" class="pages">shop</a> <br>
+                    To cart : 
+                    <a href="cart.html" target="_blank" class="pages">cart</a><br>
+                    To checkout page : 
+                    <a href="checkout.html" target="_blank" class="pages">checkout</a><br>
+                </p>
+            </div>
+
+            <div class="content-02">
+                <div class="content-02-details">
+                    <h3 class="content-title">Splash Screen</h3>
+                    <p>
+                        Developed a splash screen using HTML, CSS and some JavaScript. <br>
+                        The splash screen contains the mission and team details. <br>
+                        and redirects to the home page in 4 seconds. <br><br>
+                        To Splash screen  : 
+                        <a href="splash.html" target="_blank" class="pages">splash screen</a>
+                    </p>
+                </div>
+
+                <div class="content-02-details">
+                    <h3 class="content-title">Content Page</h3>
+                    <p>
+                        We collaboratively worked on the Content Page. <br>
+                        Researched and gathered information about underwater tourism and recreational activities. <br><br>
+                        To Content Page : 
+                        <a href="content_S1.html" target="_blank" class="pages">content page</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="content-03">
+                <div class="content-03-details">
+                    <h3 class="content-title">Navigation Bar</h3>
+                    <p>
+                        We collaboratively worked on the navigation bar. <br>
+                        Added a JavaScript function to calculate the number of items in the cart and display it on the cart icon.
+                    </p>
+                </div>
+                <div class="content-03-details">
+                    <h3 class="content-title">Other</h3>
+                    <p>
+                        We collaboratively worked on template for the website <br>
+                        Implemented CSS stylings to enhance the visual appeal of the program.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="buttons" id="top-button">
+        <a href="#top" class="button">
+            <i class="bi bi-arrow-up-circle"></i>
+        </a>
+    </div>
+
+</body>
+</html>

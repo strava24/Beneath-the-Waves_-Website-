@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Form</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        * {
+            border: none;
+        }
+
+        body {
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Overlay */
+                url("images/StockCake-Ocean\'s\ Dynamic\ Beauty_1718434291.jpg") no-repeat center center;
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            min-height: 100vh;
+            padding-bottom: 70px;
+            border-radius: 5px;
+        }
+
+        .container form {
+            padding: 20px;
+            width: 700px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .form-blocks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .section {
+            flex:1 1 250px;
+        }
+        
+        h3{
+            font-size: 20px;
+            color: #012A4A;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .inputs{
+            margin: 15px 0;
+        }
+
+        label{
+            margin-bottom: 5px;
+            display: block;
+            color: #001d3d;
+        }
+
+        label img {
+            margin-left: 20px;
+        }
+
+        input {
+            width: 100%;
+            border: 1px solid rgb(24, 24, 24);
+            border-radius: 5px;
+        }
+
+        .button{
+            background-color:#ADE8F4 ;
+            border: none;
+            border-radius: 10px;
+            color: #001d3d;
+            font-family: 'Poppins',sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+            padding: 5px 10px 5px 10px;
+            transition-property: transform;
+            transition-duration: 0.3s; 
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .button:hover{
+            transform: translateY(-6px);
+            background-color:#023E8A;
+            color: lightblue;
+            cursor: pointer;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        #backToHome, #continueShopping {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #backToHome {
+            margin-right: 10px;
+        }
+
+        #continueShopping {
+            margin-left: 10px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .products {
+            display: flex;
+        }
+
+        .products span { /*To get the product all the way to the right*/
+            margin-left: auto;
+        }
+
+        .total-amount {
+            margin-top: 10px;
+            text-align: center;
+            background-color: #A9D6E5;
+            border-radius: 5px;
+            padding: 5px 0;
+            font-weight: bold;
+        }
+
+        #cards {
+            width: 150px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <form id="checkoutForm" method="post" action="mailto:robosriyas24@gmail.com">
+            <div class="form-blocks">
+                <div class="section">
+                    <div class="sub-section">
+                        <h3>Personal Details</h3>
+                        <div class="inputs">
+                            <label for="first-name">First Name *</label>
+                            <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                        </div>
+                        <div class="inputs">
+                            <label for="surname">Surname *</label>
+                            <input type="text" id="surname" name="surname" placeholder="Surname">
+                        </div>
+                        <div class="inputs">
+                            <label for="contact-number">Phone Number *</label>
+                            <input type="tel" id="contact-number" name="contact-number" placeholder="+94-xxxxxxxxx" required>
+                        </div>
+                        <div class="inputs">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="example@example.com" required>
+                        </div>
+        
+                        <h3>Billing Address</h3>
+                        <div class="inputs">
+                            <label for="address">Address *</label>
+                            <input type="text" id="address" name="address" placeholder="Address" required>
+                        </div>
+                        <div class="inputs">
+                            <label for="town">Town *</label>
+                            <input type="text" id="town" name="town" placeholder="Town" required>
+                        </div>
+                        <div class="inputs">
+                            <label for="state">State/Province *</label>
+                            <input type="text" id="state" name="state" placeholder="Western" required>
+                        </div>
+                        <div class="inputs">
+                            <label for="country">Country *</label>
+                            <input type="text" id="country" name="country" placeholder="Sri Lanka" required>
+                        </div>
+        
+                        <h3>Payment Details</h3>
+                        <label>
+                            Cards Accepted : <br>
+                            <img src="images/cards.jpeg" alt="credit-cards" id="cards">
+                        </label>
+
+                        <div class="inputs">
+                            <label for="card-number">Card Number *</label>
+                            <input type="number" id="card-number" name="card-number" placeholder="xxxx xxxx xxxx xxxx" max="9999999999999999" required>
+                            <!--The largest number that can be stored in a 16 bit decimal system is set as the max value-->
+                        </div>
+                        <div class="inputs">
+                            <label for="card-name">Name on Card *</label>
+                            <input type="text" id="card-name" name="card-name" placeholder="Name" required>
+                        </div>
+                        <div class="inputs">
+                            <label for="exp-date">Expire Date</label>
+                            <input type="text" id="exp-date" name="exp-date" placeholder="MM/YY">
+                        </div>
+                        <div class="inputs">
+                            <label for="cvv">CVV *</label>
+                            <input type="number" max="9999" id="cvv" name="cvv" placeholder="xxxx" required>
+                        </div>
+        
+                    </div>
+        
+                </div>
+        
+                <div class="section">
+                    <h3>Order Summary</h3>
+                    
+                    <div id="orders">None</div>
+
+                    <div id="label"></div>
+                </div>
+
+                <input type="submit" class="button" value="Place Order" onclick="placeOrder()"> <!--Clearing the basket when the user has successfully placed order-->
+                <input type="reset" class="button">
+            </div>
+        </form>
+    </div>
+
+
+    <div class="button-container">
+        <div class="buttons" id="backToHome">
+            <a href="home.html" class="button">Back to Home</a>
+        </div>
+        <div class="buttons" id="continueShopping">
+            <a href="shop.html" class="button">Continue Shopping</a>
+        </div>
+    </div>
+
+
+    <section class="section_footer">
+        <div class="footer_pageEditor">
+
+            <p>Done by <a href="pageEditor_S1.html" target="_blank">Robosriyas Fernando</a></p>
+            
+        </div>
+
+        <div class="footer">
+
+            <div class="footer_content">
+                
+                <div class="footer_logo">
+                    <img class="footer_img" src="images/logo.jpg" alt="company logo">
+                    <img class="footer_title" src="images/titleFinal.png" alt="website title">
+                </div>
+                <div class="footer_icons">
+                    <h4>Social media</h4>
+                    <a href="https://www.instagram.com/unitednations/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="https://web.facebook.com/groups/greenrangersearth.org/?_rdc=1&_rdr" target="_blank"><i class='bx bxl-facebook' ></i></a>
+                    <a href="https://x.com/UN" target="b"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://www.linkedin.com/company/united-nations/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                </div>
+                
+
+            </div>
+            <div class="footer_content">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="../Student_2/home.html">Home</a></li>
+                    <li><a href="../Student_3/team.html">About US</a></li>
+                    <li><a href="../Student_2/feedback.html">Feedback</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="../Student_4/sitemap.html">Sitemap</a></li>
+                    <li><a href="../Student_4/gallery.html">Gallery</a></li>
+                    <li><a href="../Student_2/lifediversity.html">Life Diversity</a></li>
+                    <li><a href="content_S1.html">Tourism</a></li>
+                    <li><a href="../Student_3/content_S3.html">Coral Reefs</a></li>
+                    <li><a href="../Student_4/content_page04.html">Sustainable Practices</a></li>
+
+                </ul>              
+
+            </div>
+
+            <div class="footer_content">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>Tele  : +1-212-963-3209</li>
+                    <li>Email :  population@un.org</li>
+                    <li class="extra_space">director.oisc@un.org</li>
+                </ul>
+
+            </div>
+
+            <div class="footer_content">
+
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="https://www.un.org/en/about-us/terms-of-use" target="_blank">Terms and conditions</a></li>
+                    <li><a href="https://www.un.org/en/about-us/privacy-notice" target="_blank">Privacy policy</a></li>
+                </ul>
+
+            </div>
+    </div>
+    
+    <div class="rights">
+        &copy; 2024 Beneath the waves. All rights reserved.
+    </div>
+
+    </section>
+
+    <script>
+        let orders = document.getElementById('orders');
+        let label = document.getElementById('label');
+        let form = document.getElementById('checkoutForm');
+
+        let basket = JSON.parse(localStorage.getItem("data")) || []; // Getting te details of ordered products from the local storage
+        console.log(basket);
+
+        let shopItemsData = [ // Defining items as objects 
+            {
+                id: "hoodie",
+                name: "'Turtle Haven Hoodie'",
+                price: 30,
+                desc: "Exclusive Merch Hoodie Featuring Our Iconic Logo",
+                img: "images/merch_hoodie.png"
+            },
+            {
+                id: "tshirt",
+                name: "'Turtle Haven Tee'",
+                price: 5,
+                desc: "Exclusive Merch Tee Featuring Our Iconic Logo",
+                img: "images/merch_finalT.png"
+            },
+            {
+                id: "cap",
+                name: "'Turtle Haven Cap'",
+                price: 3,
+                desc: "Exclusive Merch Cap Featuring Our Iconic Logo",
+                img: "images/merch_cap.png"
+            },
+            {
+                id: "notebook",
+                name: "'Turtle Haven Book'",
+                price: 2,
+                desc: "Exclusive Merch NoteBook Featuring Our Iconic Logo",
+                img: "images/merch_notebookFinal.jpg"
+            },
+            {
+                id: "mug",
+                name: "'Turtle Haven Mug'",
+                price: 6,
+                desc: "Exclusive Merch Mug Featuring Our Iconic Logo",
+                img: "images/merch_mug_final.png"
+            },
+            {
+                id: "bag",
+                name: "'Whale Song Tote'",
+                price: 8,
+                desc: "Exclusive Whale-themed Tote Bag in Oceanic Hues",
+                img: "images/merc-finalbag.jpeg"
+            },
+            {
+                id: "wallStickers",
+                name: "'Oceanic Life Decals'",
+                price: 10,
+                desc: "Exclusively Elegant Sea Creatures Wall Stickers",
+                img: "images/merch_stickers.avif"
+            },
+            {
+                id: "sculpture",
+                name: "'Dolphin Sculpture'",
+                price: 20,
+                desc: "Handcrafted Dolphin Sculpture",
+                img: "images/merch_sculpture.jpg"
+            },
+            {
+                id: "beachKit",
+                name: "'Coastal Escape Kit'",
+                price: 30,
+                desc: "Beach Essentials Kit: Flip Flops, Towel, Sunglasses",
+                img: "images/merch_beachkit.png"
+            },
+            {
+                id: "painting1", // id should be unique for each item on the cart so that JS will be able to recognize the product to do the calculations
+                name: "'Ocean Symphony'",
+                price: 100,
+                desc: "Exclusive Painting of Ocean Waves in Vibrant Blues",
+                img: "images/Ocean-Symphony_final.png"
+            },
+            {
+                id: "paiting2",
+                name: "'Seahorse Serenade'",
+                price: 80,
+                desc: "Exclusive Painting of Seahorse Dreams",
+                img: "images/final_painting.jpg"
+            },
+            {
+                id: "carePack",
+                name: "'Oceanic Men's Care'",
+                price: 40,
+                desc: "Men's Essentials Kit: Watch, Bottle, Perfume",
+                img: "images/merch_finalPackage.png"
+            }
+        ];
+
+        let generateOrders = () => {
+            if (basket.length !== 0) {
+                return orders.innerHTML = basket.map((x) => {
+                    let {id, item} = x;
+                    let search = shopItemsData.find((y) => y.id === id) || [];
+
+                    return`
+                    <p class="products">${search.name} ($ ${search.price}) <span>x ${item} </span></p>
+                    `
+                }).join("");
+            }
+        }
+
+        let calculateTotalAmount = () => {
+            if (basket.length !== 0) {
+                let amount = basket.map((x) => {
+                let { item, id } = x;
+                let search = shopItemsData.find((y) => y.id === id) || []; // going through the ids on the araay shopItemsData and if we find it it to be on the basket we're returning it
+                return item * search.price;
+                }).reduce((x, y) => (x+y), 0); // Getting the total using the reduce method
+
+                label.innerHTML = `
+                <p class="total-amount">Total : $ ${amount}</p>
+                `
+            }
+        }
+
+        generateOrders();
+        calculateTotalAmount(); // Invoking the function to calculate the total
+
+
+        let placeOrder = () => {
+            if (form.checkValidity()) {
+                alert("Placing order!");
+                basket = []; // Making the basket empty
+                localStorage.setItem("data", JSON.stringify(basket)); // updating the local storage
+
+                setTimeout(function() {
+                    window.location.href = '../Student_2/home.html';
+                }, 2000);
+            }
+            else {
+                alert("Fill the Form to Place the Order!");
+            }
+        }
+    </script>
+
+</body>
+</html>
